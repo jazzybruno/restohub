@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.overview {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.sidebar {
+  background-color: #000;
+  height: 100vh;
+  width: 18%;
+  position: sticky;
+  top: 0px;
+}
+
+.otherbar {
+  background-color: #eff4f4;
+  height: 160vh;
+  width: 82%;
+}
+.over {
+  cursor: pointer;
+}
+
+.navbar {
+  width: full;
+  background-color: #fff;
+  height: 8vh;
+  background: #fffefe;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  position: sticky;
+  top: 0px;
+  z-index: 10;
+}
+
+.serch {
+  width: 30%;
+  margin-left: 20%;
+  margin-top: 1%;
+  height: 4.5vh;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+  border: 1px solid #b3c10f;
+  border-radius: 8px;
+  font-size: 7px;
+}
+
+.stats{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  height: 42vh;
+  width: 20%;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: scale(1.3 , 1.3);
+}
+
+.amount{
+    color: #b3c10f;
+    font-size: 20px;
+}
+
+.chart{
+margin-left: 15%;
+margin-top: 6%;
+}
+
+.new{
+    border-radius: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: scale(1.2 , 1.2);
+  float: right;
+
+}
+
+.choose label{
+    font-size: 22px;
+}
+
+.choose input{
+    margin-top: 12px;
+
+}
+
+.space{
+    height: 1px;
+    background-color: #b3c10f;
+    margin-top: 12px;
+}

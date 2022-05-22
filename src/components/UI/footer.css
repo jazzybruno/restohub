@@ -1,0 +1,183 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.footer{
+    background-color: #05021F;
+    height: 40vh;
+    color: #fff;
+    overflow: hidden;
+}
+.logo{
+    width: 130px;
+    position: relative;
+    top:100px;
+    right: 850px;
+  
+}
+.column1 p{
+    position:relative;
+    top:90px;
+    right:814px;
+    color:#FFFFFF
+}
+.instagram{
+    font-size:23px;
+    position:relative;
+    top:120px;
+    right:830px;
+    border: 1px solid #656372;
+    border-radius:5px;
+    /* height:40px; */
+    padding: 10px;
+    background-color: #E7E4FF;
+    color:black;
+}
+.facebook{
+    font-size:23px;
+    position:relative;
+    top:120px;
+    right:820px;
+    border: 1px solid #656372;
+    border-radius:5px;
+    /* height:40px; */
+    padding: 10px;
+    background-color: #E7E4FF;
+    color:black;
+
+}
+.youtube{
+    font-size:23px;
+    position:relative;
+    top:120px;
+    right:807px;
+    border: 1px solid #656372;
+    border-radius:5px;
+    /* height:40px; */
+    padding: 10px;
+    background-color: #E7E4FF;
+    color:black;
+
+}
+a{
+    text-decoration:none;
+    display: block;
+    color:#FFFFFF;
+    padding-top: 10px;
+}
+
+.contact{
+    position:relative;
+    left:20px;
+
+}
+.about{
+    position:relative;
+    left:15px;
+}
+ul{
+    position:relative;
+    left:36px;
+    
+}
+
+.column1{
+    /* margin-left: 150px; */
+    position: relative;
+    left:150px;
+    bottom:50px;
+}
+h3{
+    position:relative;
+    left:60px;
+    color:#a4af25;
+}
+.column2{
+    position:relative;
+    bottom:70px;
+    right:350px
+}
+
+.column3{
+    position:relative;
+    bottom:220px;
+    right:40px
+
+}
+.phone{
+    position: relative;
+    left:68px;
+    bottom:18px;
+}
+.email{
+    position: relative;
+    left:92px;
+    bottom:30px;
+    /* top:10px; */
+}
+.location{
+    position: relative;
+    left:70px;
+    bottom:35px;
+    /* top:20px; */
+}
+.tel{
+    position: relative;
+    right:10px;
+    top:18px;
+}
+.mail{
+    position: relative;
+    right:10px;
+    font-size:20px;
+    top: 5px;
+}
+.locate{
+    position: relative;
+    right:10px;
+}
+.column4{
+    position: relative;
+    bottom:396px;
+    left:400px;
+}
+.column4 p{
+    position: relative;
+    left:55px;
+    top:5px;
+}
+.app-store{
+    position: relative;
+    bottom:16px;
+    left:70px;
+
+}
+
+.apple{
+    font-size:20px;
+    position: relative;
+    top:18px;
+    left: 15px;
+}
+
+.play-sto{
+    position: relative;
+    left:19px;
+}
+.play-store{
+    position: relative;
+    left:80px;
+    bottom:35px;
+}
+hr{
+    position: relative;
+    bottom:360px;
+    /* width:90%; */
+    
+}
+.last-words{
+    color:#B3C10F;
+    position: relative;
+    bottom:340px;
+}

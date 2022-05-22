@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mainmenu {
+  background-color: #eff4f4;
+  width: 82%;
+}
+
+.menus {
+  width: 90%;
+  background-color: white;
+}
+
+.theavailable button {
+  border: 1px solid #b3c10f;
+  height: 110%;
+  font-size: 20px;
+}
+
+.theavailable :active {
+  background-color: #b3c10f;
+  color: white;
+  border: none;
+}
+.newMenu {
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  position: sticky;
+  top: 80px;
+}
+

@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mainProfile{
+    background-color: #E7EEEE;
+}
+
+
+.elementProfile{
+    
+    height: 46vh;
+    margin-left: 5%;
+    margin-top: 3%;
+    width: 22vw;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.numberProfile{
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+height: 5vh;
+width: 5vh;
+background-color: #b3c10f;
+}
+
+.numberProfile p{
+    margin-top: 8px;
+}
+
+.infoMain{
+    height: 55vh;
+    width: 40vw;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+.filling{
+    margin-left: auto;
+    margin-right: 10%;
+    margin-top: auto;
+    margin-bottom: 5%;
+}
+
+.profilerun{
+    height: 91vh;
+}
+
+.longOnes{
+    border: 2px solid #615F5F;
+    color: #615F5F;
+    display: block;
+    width: 35vw;
+    height: 6vh;
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding-left: 2%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.shortOnes{
+    border: 2px solid #615F5F;
+    color: #615F5F;
+    display: block;
+    padding-left: 2%;
+    margin-top: 12px;
+    height: 6vh;
+    border-radius: 10px;
+    font-size: 1.1em;
+}
+
+.RestType{
+    background-color: #fff;
+    border-radius: 10px;
+    height: 60vh;
+    width: 24vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+.RestType > form{
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.selecting{
+    border: 2px solid #615F5F;
+    background-color: #fff;
+    width: 22vw;
+    height: 6vh;
+    display: block;
+    border-radius: 10px;
+    font-size: 1.3em;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.smallOnes{
+    width: 40%;
+    border-radius: 10px;
+    font-size: 1.3em;
+    border: 2px solid #615F5F;
+    height: 6vh;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.file{
+    
+    display: block; 
+    padding-left: 6px;
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ownMenu{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    height: 72vh;
+    width: 55vw;
+
+}
+
+.buttonsMenus{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.buttonsMenus button{
+    border: 1px solid #b3c10f;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 12px;
+}
+
+.menuoption :hover {
+    background-color: #b3c10f;
+    color: white;
+}
+
+.adding{
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+.longForms{
+    border: none;
+    border-bottom: 1px solid black ;
+    display: block;
+    width: 90%;
+    height: 3vh;
+    font-size: 1.5em;
+    margin-top: 3%;
+    margin-bottom: 2%;
+}
+
+.gone{
+    border: 1px solid #b3c10f;
+    font-size: 1.3em;
+
+}

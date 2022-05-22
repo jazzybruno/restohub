@@ -1,0 +1,88 @@
+.homeSecond{
+    height: 55vh;
+    width: 100%;
+    background-image: url('../images/resto222.png');
+    background-repeat: no-repeat;
+    background-size:  100% 55vh;
+    clear: left;
+}
+
+.words{
+    float: left;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+}
+
+.words h1{
+    color: white;
+    text-align: center;
+    font-size: 270%;
+}
+
+.words span{
+    color: #B3C10F   ;
+}
+
+.words h2{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 12px;
+}
+
+.words h3{
+    color: white;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 1.7em;
+    margin-bottom: 12px;
+    margin-right: 19%;
+}
+
+.words div{
+    display: flex;
+}
+
+.btn1{
+    color: white;
+    background-color: #B3C10F;
+    border: none;
+    padding: 12px;
+    width: 19%;
+    font-size: 1.3em;
+    border-radius: 8px;
+    margin-left: auto;
+    /* align-self: center; */
+    /* margin-left: auto; */
+    /* margin-right: -30px; */
+}
+.btn2{
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid #B3C10F;
+    padding: 10px;
+    width: 19%;
+    font-size: 1.3em;
+    border-radius: 8px;
+    /* align-self: center; */
+    /* margin-right: auto; */
+    /* margin-left: 32%; */
+    margin-right: 28.5%;
+
+}
+
+.reusable{
+    margin-top: 2%;
+    display: flex;
+    gap: 10%;
+}
+
+
+.how{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}

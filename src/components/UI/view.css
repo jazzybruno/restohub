@@ -1,0 +1,41 @@
+.view {
+  width: 220px;
+  height: 159px;
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  margin-top: 19px;
+  margin-left: 46px;
+  transform: scale(1.5,1.5);
+}
+
+.view :nth-child(1) {
+  margin-top: 4px;
+  border-radius: 5px;
+  width: 26px;
+  margin-left: 12%;
+  padding: 3px;
+  margin-right: auto;
+}
+
+.view :nth-child(2) {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 19px;
+  line-height: 20px;
+  color: #b3c10f;
+  margin-top: 18px;
+  margin-left: 12%;
+}
+
+.view :nth-child(3) {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 18px;
+  margin-left: 12%;
+  color: #304546;
+  margin-top: 32px;
+}
