@@ -10,15 +10,15 @@ function LogIn() {
       </div>
       <div className=" bgForm  ">
         <div className="flexStuff">
-          <h4 className="font-bold mx-44">Welcome</h4>
-          <h2 className="pb-2 pt-2 text-2xl mx-28 ">
+          <h4 className="font-bold text-center">Welcome</h4>
+          <h2 className="login pb-2 pt-2 text-xl mx-20 w-[100%]">
             Log In to Resto<span>Hub</span>
           </h2>
         </div>
         <form className=" mt-10" action="/overview">
           <label className="login p-5">Email</label> <br />
           <input
-            className=" login1 border-2 mx-24 px-5 text-xl py-5 mb-[30px] mt-[10px] w-[400px] h-[50px]"
+            className=" login1 border-2 mx-24 px-5 text-xl py-5 mb-[30px] mt-[10px] w-[73%] h-[50px]"
             name="fname"
             placeholder="Email Adress"
           />{" "}
@@ -26,14 +26,14 @@ function LogIn() {
           <label className="login p-5">Password</label>
           <br />
           <input
-            className="login1 px-5  py-[20px] mb-[30px] mt-10 text-xl  mx-24 mt-[10px] border-2 w-[400px] h-[50px]"
+            className="login1 px-5  py-[20px] mb-[30px] mt-10 text-xl  mx-24 mt-[10px] border-2 w-[73%] h-[50px]"
             name="fname"
             placeholder="Enter your Password"
           />
           <div className=" flex justify-center content-center  ">
             <input
               type="submit"
-              className="bg-[#B3C10F]  mt-10 text-white text-2xl my-[30px]  w-[400px] h-[50px]"
+              className="bg-[#B3C10F] ml-10  mt-10 text-white text-2xl my-[30px]  w-[73%] h-[50px]"
               value="Log In"
             />
           </div>
