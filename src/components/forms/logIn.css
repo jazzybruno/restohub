@@ -3,9 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.login{
-  margin-left: auto;
-}
 
 #bgSignUp {
   display: flex;
@@ -22,7 +19,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 110vh;
+  height: 100vh;
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -39,7 +36,8 @@
   background-color: white;
   margin-right: 7em;
   border-radius: 20px;
-  width:30%;
+  width: 30%;
+  height: 90vh;
 }
 .bgForm2 {
   background-color: white;
@@ -75,14 +73,14 @@ label{
 
 .login{
   float: left;
-  margin-left: 5rem;
+  margin-left: 2rem;
 }
 
 .login1{
   clear: left;
   height: 6vh;
   font-size: 19px;
-  /* margin-left: -2%;  */
+  margin-right: 12px; 
   border-color  : #B3C10F;
   border-radius: 9px;
 }
@@ -96,7 +94,7 @@ label{
   clear: left;
   height: 6vh;
   font-size: 19px;
-  /* margin-right: 12px;  */
+  margin-right: 12px; 
   border-color  : #B3C10F;
   border-radius: 9px;
 }
@@ -271,4 +269,31 @@ display: block;
   margin: 1em .1em 1.5em;
   box-shadow: 1px 1px 5px rgba(250px, 250px, 250px, 0.4);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px){
+
+#bgLogIn{
+  display:block;
+  align-items:center;
+  width:100%;
+  height:100vh;
+}
+#bgSignUp{
+  display:block;
+  align-items:center;
+  width:100%;
+  height:100vh;
+}
+ .bgForm{
+  width: 60%;
+  margin-left:200px;
+  margin-top:10px;
+}
+.bgForm2{
+  width: 60%;
+  margin-left:200px;
+  margin-top:10px;
+}
+  
 }
