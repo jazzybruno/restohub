@@ -1,4 +1,4 @@
-import React from 'react';
+import {React , useState} from 'react';
 import './menu.css'
 import NavBar from '../Dashboard/navbar';
 import Sidebar from '../Dashboard/sidebar';
@@ -7,6 +7,33 @@ import data from './data';
 import plus from '../images/plus.png'
 
 const Menu = ()=>{
+const [menu , setMenu] = useState(data)
+  
+function sortDrink() {
+  setMenu(data)
+   setMenu(data.filter(v=> v.type==="Drink"))
+}
+
+function sortStarter() {
+  setMenu(data)
+  setMenu(data.filter(v=> v.type==="Starter"))
+
+}
+
+function sortAppertizer() {
+  setMenu(data)
+  setMenu(data.filter(v=> v.type==="Appertizer"))
+}
+
+function sortDessert() {
+  setMenu(data)
+  setMenu(data.filter(v=> v.type==="Dessert"))
+  
+}
+
+function sortAll() {
+  setMenu(data)
+}
     return (
         <div className="overview">
       <Sidebar />
@@ -19,16 +46,16 @@ const Menu = ()=>{
          <p  className="font-light text-xl ml-10 mt-4">as of 25 May 2021</p>
           </div>
           <div className="theavailable flex mt-10 gap-5 ml-3">
-              <button>Drink</button>
-              <button>Starter</button>
-              <button>Appetizer</button>
-              <button>Dessert</button>
-              <button>Main</button>
+              <button onClick={sortDrink}>Drink</button>
+              <button onClick={sortStarter}>Starter</button>
+              <button  onClick={sortAppertizer}>Appetizer</button>
+              <button  onClick={sortDessert}>Dessert</button>
+              <button onClick={sortAll}>All</button>
           </div>
          </div>
         <div className="flex">
         <div className="menulist ml-48 mt-10" >
-         {data.map(v=> <MenuList img={v.img} title={v.title} desc={v.desc} money={v.money} />)}
+         {menu.length === 0 ? <p>NO menu found</p> : menu.map(v=> <MenuList key={v.id} img={v.img} title={v.title} desc={v.desc} money={v.money} />)}
           </div>
 
           <div className="newMenu h-96 w-[25%] ml-6 mt-20">
