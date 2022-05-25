@@ -10,30 +10,32 @@ import img from '../images/empty.gif'
 
 const Menu = ()=>{
 const [menu , setMenu] = useState(data)
+const [type , setType] = useState("")
   
 function sortDrink() {
-  setMenu(data)
+  setType("Drink")
    setMenu(data.filter(v=> v.type==="Drink"))
 }
 
 function sortStarter() {
-  setMenu(data)
+  setType("Starter")
   setMenu(data.filter(v=> v.type==="Starter"))
 
 }
 
 function sortAppertizer() {
-  setMenu(data)
+  setType("Appertizer")
   setMenu(data.filter(v=> v.type==="Appertizer"))
 }
 
 function sortDessert() {
-  setMenu(data)
+  setType("Dessert")
   setMenu(data.filter(v=> v.type==="Dessert"))
   
 }
 
 function sortAll() {
+  setType("All")
   setMenu(data)
 }
     return (
@@ -48,7 +50,7 @@ function sortAll() {
          <p  className="font-light text-xl ml-10 mt-4">as of 25 May 2021</p>
           </div>
           <div className="theavailable flex mt-10 gap-5 ml-3">
-              <button onClick={sortDrink}>Drink</button>
+              <button onClick={sortDrink}> </button>
               <button onClick={sortStarter}>Starter</button>
               <button  onClick={sortAppertizer}>Appetizer</button>
               <button  onClick={sortDessert}>Dessert</button>
