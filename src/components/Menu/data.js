@@ -7,7 +7,7 @@ const data = [
     title: "Kaffir lime vodka Lemon Grass Ginger Citrus",
     desc: "Tom Yummy 12.5",
     money: "RWF 60,000",
-    type:"Drink"
+    type:"Starter"
   },
   {
     id: 2,
@@ -40,7 +40,7 @@ const data = [
     title: "Kaffir lime vodka Lemon Grass Ginger Citrus",
     desc: "Tom Yummy 12.5",
     money: "RWF 60,000",
-    type:"Drink"
+    type:"Starter"
   },
   {
     id: 6,

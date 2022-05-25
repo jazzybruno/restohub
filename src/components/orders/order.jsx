@@ -5,6 +5,8 @@ import NavBar from "../Dashboard/navbar";
 import Odd from "../UI/order";
 import Data from "./data";
 import add from "../images/add.png";
+import img from '../images/empty.gif'
+import Error from "../UI/error";
 
 const Order = () => {
   const [order, setOrder] = useState(Data);
@@ -24,7 +26,7 @@ const Order = () => {
   const allHandler = () => {
     setOrder(Data);
   };
-return (
+  return (
     <div className="overview">
       <SideBar />
       <div className="othercontent">
@@ -41,7 +43,7 @@ return (
               </div>
             </div>
             <div className="listOrder ml-44 ">
-              {order.map((v) => (
+              {order.length === 0 ? <Error img={img} title="Empty" message="There are no orders available of this type" /> : order.map((v) => (
                 <Odd
                   key={v.number}
                   number={v.number}

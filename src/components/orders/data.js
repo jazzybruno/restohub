@@ -61,7 +61,7 @@ const Data = [
     number: "10",
     title: "Kaffr Lime Vodka, Lemongrass, Ginger, Citrus",
     desc: "Tom Yummy | x2",
-    status : "new"
+    status : "rejected"
   },
   
 ];
