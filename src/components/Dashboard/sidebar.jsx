@@ -49,7 +49,7 @@ const SideBar = () => {
         </a>
 
       
-          <div className="over flex mt-5">
+          <div  className=" over flex mt-5">
             {" "}
             <img src={users} alt="" />{" "}
             <p className="text-white my-auto  mx-auto text-xl">Users</p>

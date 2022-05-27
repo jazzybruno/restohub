@@ -9,7 +9,7 @@ import {
     Legend,
   } from 'chart.js';
   import { Bar } from 'react-chartjs-2';
-  // import faker from 'faker';
+
   
   ChartJS.register(
     CategoryScale,
@@ -19,7 +19,7 @@ import {
     Tooltip,
     Legend
   );
-//   const dataLinks = [1,2,3,4,5,6,7,8,8,9,0,10,11,22,33,44,]
+
                                                                                                                                                                                                                                                                             
   export const options = {
     responsive: true,
@@ -49,7 +49,10 @@ import {
   }
  function Chart() {
     return( 
-      <Bar options={options} height={`230%`} data={data} />
+      <div>
+
+        <Bar options={options} height={`230%`} data={data}  />
+      </div>
     );
   }
   export default Chart
