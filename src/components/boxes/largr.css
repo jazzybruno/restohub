@@ -1,0 +1,38 @@
+
+
+.right{
+    width: 15rem;
+    height: 20rem;
+    background-color: #a9bebe;
+    position: absolute;
+    border-radius: 0.5rem;
+    bottom: 3rem;
+    right: 1rem;
+    color: rgb(7, 7, 7);
+}
+.right>h2{
+    margin: 1rem 2rem;
+}
+.right>small{
+    margin-left: 2rem;
+    width: 100%;
+    border-bottom: 2px solid white;
+}
+form{
+    width: 100%;
+    margin:1.2rem 1rem
+}
+form>label{
+    margin-left: 0.5rem;
+}
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+
+ 
