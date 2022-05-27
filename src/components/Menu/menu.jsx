@@ -5,6 +5,8 @@ import Sidebar from '../Dashboard/sidebar';
 import MenuList from '../UI/menu';
 import data from './data';
 import plus from '../images/plus.png'
+import Error from '../UI/error';
+import img from '../images/empty.gif'
 
 const Menu = ()=>{
 const [menu , setMenu] = useState(data)
@@ -57,7 +59,7 @@ function sortAll() {
          </div>
         <div className="flex">
         <div className="menulist ml-48 mt-10" >
-         {menu.length === 0 ? <p>NO menu found</p> : menu.map(v=> <MenuList key={v.id} img={v.img} title={v.title} desc={v.desc} money={v.money} />)}
+         {menu.length === 0 ? <Error img={img} title="Empty" message="There are no menus available of this type" /> : menu.map(v=> <MenuList key={v.id} img={v.img} title={v.title} desc={v.desc} money={v.money} />)}
           </div>
 
           <div className="newMenu h-96 w-[25%] mb-10 ml-6 mt-20 float-left">
