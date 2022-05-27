@@ -1,0 +1,80 @@
+*{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* =========================== user menu ========================= */
+.users-all{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #E7EEEE;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.users-all>img{
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.796);
+    border-radius: 4rem;
+}
+.users-all>div{
+    margin-top: 1.3rem
+}
+.users-all>div>h5{
+    font-size: 1rem;
+    margin:1rem 0rem;
+    color: #d5e7118e;
+}
+
+/* ======================================= rigth menu ================================= */
+.right-right{
+    position: sticky;
+    bottom: 0;
+    right: 0;
+    width: 17rem;
+    height: 20rem;
+    background-color: #E7EEEE;
+    margin-top: 15rem;
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+.right-right>small{
+  width: 100%;
+  color: darkgray;
+  font-size:1.1rem ;
+  margin-top: 1.6rem;
+  border-bottom: 1px solid black;
+}
+.right-right>h2{
+    font-size: 0.9rem;
+    margin-bottom: 1rem
+}
+.right-right>ul{
+    margin: 1rem;
+
+}
+.right-right>ul>li::marker{
+    
+    border: 1px solid black;
+    font-size: 2rem;
+}
+.activ{
+    color: #d5e7118e;
+    width: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main>h4{
+    color: #d5e7118e;
+}
+.main>small{
+    font-size: 1rem
+}
