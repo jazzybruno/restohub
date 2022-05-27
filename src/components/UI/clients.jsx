@@ -16,7 +16,7 @@ const Client = (props) => {
         <img src={props.img} alt="client" />
       </div>
       <div className="type">
-        <button>{props.type}</button>
+        <button className="button">{props.type}</button>
       </div>
     </div>
   );

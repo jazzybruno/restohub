@@ -16,6 +16,8 @@
   border: 1px solid #b3c10f;
   height: 110%;
   font-size: 20px;
+  width: 7vw;
+  border-radius: 12px;
 }
 
 .theavailable :active {

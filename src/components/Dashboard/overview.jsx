@@ -65,7 +65,7 @@ const Overview = () => {
               ))}
             </div>
           </div>
-          <div className="new w-[40%]   bg-white  ml-[31vh] mr-[-120px]  mt-10">
+          <div className="new w-[20vw] bg-white h-[47vh] ml-[31vh] mr-[-120px]  mt-10">
               <div className="flex ">
                   <p className="mr-auto ml-5 mt-7 font-bold  text-xl">Create</p>
                   <p className="mr-5 mt-7 font-light text-xl">View All</p>

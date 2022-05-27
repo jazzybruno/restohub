@@ -18,7 +18,7 @@
 .words h1{
     color: white;
     text-align: center;
-    font-size: 250%;
+    font-size: 270%;
 }
 
 .words span{
@@ -29,7 +29,7 @@
     color: white;
     font-weight: bold;
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2.5em;
     margin-bottom: 12px;
 }
 
@@ -37,7 +37,7 @@
     color: white;
     font-weight: lighter;
     text-align: center;
-    font-size: 1.3em;
+    font-size: 1.7em;
     margin-bottom: 12px;
     margin-right: 19%;
 }
@@ -51,9 +51,8 @@
     background-color: #B3C10F;
     border: none;
     padding: 12px;
-    width: 15%;
-    font-size: 0.7em;
-    font-weight: bold;
+    width: 19%;
+    font-size: 1.3em;
     border-radius: 8px;
     margin-left: auto;
     /* align-self: center; */
@@ -65,26 +64,25 @@
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid #B3C10F;
     padding: 10px;
-    width: 15%;
-    /* font-size: 0.em; */
+    width: 19%;
+    font-size: 1.3em;
     border-radius: 8px;
     /* align-self: center; */
     /* margin-right: auto; */
     /* margin-left: 32%; */
-    margin-right: 34.5%;
+    margin-right: 28.5%;
 
 }
 
 .reusable{
     margin-top: 2%;
     display: flex;
-    gap: 8%;
-    margin-left: 6%;
+    gap: 10%;
 }
 
 
 .how{
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
 }

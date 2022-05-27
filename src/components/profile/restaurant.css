@@ -37,6 +37,9 @@ background-color: #b3c10f;
     background-color: #fff;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
+    transform: scale(1.3, 1.3);
+    margin-bottom: 10%;
+    margin-right: 30%;
 }
 
 .filling{
@@ -130,7 +133,7 @@ background-color: #b3c10f;
 
 }
 
-.buttonsMenus{
+.buttonsMenus {
     margin-left: 5%;
     margin-right: 5%;
 }
@@ -139,6 +142,9 @@ background-color: #b3c10f;
     border: 1px solid #b3c10f;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     margin-top: 12px;
+    width: 20%;
+    height: 8vh;
+    border-radius: 10px;
 }
 
 .menuoption :hover {
@@ -165,5 +171,7 @@ background-color: #b3c10f;
 .gone{
     border: 1px solid #b3c10f;
     font-size: 1.3em;
-
+    width: 15%;
+    height: 8vh;
+    border-radius: 10px;
 }
