@@ -5,7 +5,7 @@ const Menu = (props) => {
   return (
     <div className="menu">
       <div>
-        <img   src={props.img} alt="Menu image" />
+        <image   src={props.img} alt="Menu imae" />
       </div>
       <div className="desc">
         <div>{props.title}</div>

@@ -7,7 +7,12 @@ import images1  from "../../images/userss.png";
 import images2  from "../../images/order.png";
 
 
+const icons=()=>[{
+    FaBitcoin ,
+RiFolderUserLine 
+}]
 
+icons();
 
  
      
