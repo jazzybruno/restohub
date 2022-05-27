@@ -20,7 +20,7 @@ const Home =  ()=>{
            </div>
               <h1 className='how'>How it works</h1>
            <div className="reusable">
-           {data.map(v=> <Landing img={v.img} title={v.title} desc={v.desc} />)}
+           {data.map(v=> <Landing img={v.img} width="100px" title={v.title} desc={v.desc} />)}
            </div>
            {/* <Footer /> */}
         </div>
