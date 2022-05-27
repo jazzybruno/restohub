@@ -13,6 +13,7 @@ import Profile from './components/profile/restaurant';
 
 const App = () => {
  return(
+  
    <BrowserRouter>
      <Routes>
        <Route path='/' element={<Home />}></Route>
@@ -26,6 +27,7 @@ const App = () => {
        <Route path='/profile' element={<Profile />}></Route>
      </Routes>
    </BrowserRouter>
+
  )
 }
 

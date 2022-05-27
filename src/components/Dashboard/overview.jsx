@@ -21,7 +21,7 @@ const Overview = () => {
             <View img={v.img} title={v.title} amount={v.amount} />
           ))}
         </div>
-        <div className="chart flex  mt-10 gap-28">
+        <div className="chart flex  mt-10 ">
           <div className="chartreal w-1/2">
             <Chart />
           </div>
@@ -38,7 +38,7 @@ const Overview = () => {
           </div>
         </div>
 
-        <div className="overlast flex mx-64 w-[71%] ">
+        <div className="overlast flex mx-64 w-[70%] ">
           <div>
             <div className="types1 flex gap-40 ">
               {Data_last.map((items) => (
@@ -52,7 +52,7 @@ const Overview = () => {
                 />
               ))}
             </div>
-            <div className="types2 flex gap-40 mt-24 ">
+            <div className="types2 flex gap-40 ">
               {Data_last1.map((items) => (
                 <Types
                   name={items.name}
@@ -65,7 +65,7 @@ const Overview = () => {
               ))}
             </div>
           </div>
-          <div className="new w-[40%]   bg-white  ml-[31vh] mr-[-120px]  mt-10">
+          <div className="new w-[20vw] bg-white h-[47vh] ml-[31vh] mr-[-120px]  mt-10">
               <div className="flex ">
                   <p className="mr-auto ml-5 mt-7 font-bold  text-xl">Create</p>
                   <p className="mr-5 mt-7 font-light text-xl">View All</p>

@@ -30,11 +30,11 @@ const Clients = () => {
         </div>
         <div className="allclients bg-white  w-[90%] ml-[10%] mt-10 rounded-xl">
             <p className="ml-20 pt-10 text-[150%] ">Clients</p>
-            <div className="header flex font-light text-xl ml-20 mt-7">
+            <div className="header flex font-light text-xl ml-[6%] mt-7">
                 <p>Client Details</p>
-                <p className="ml-80">Sales</p>
-                <p className="ml-72">Detailed Report</p>
-                <p className="ml-60">Category</p>
+                <p className="ml-[25%]">Sales</p>
+                <p className="ml-[22%]">Detailed Report</p>
+                <p className="ml-[15%]">Category</p>
             </div>
             {Data.map(v=> <Client name={v.name} updated={v.updated}  money={v.money} date={v.date} img={v.img} type={v.type} />)}
         </div>

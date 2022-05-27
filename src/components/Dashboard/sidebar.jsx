@@ -13,7 +13,7 @@ import clients from "../images/clients.png";
 const SideBar = () => {
   return (
     <div className="sidebar">
-      <div className="logo mx-10 gap-10">
+      <div className="logo mx-10">
         <img src={logo} alt="The logo of the app" />
 
         <a href="/overview">
@@ -49,7 +49,7 @@ const SideBar = () => {
         </a>
 
       
-          <div className="over flex mt-5">
+          <div  className=" over flex mt-5">
             {" "}
             <img src={users} alt="" />{" "}
             <p className="text-white my-auto  mx-auto text-xl">Users</p>

@@ -14,6 +14,7 @@ const Profile = ()=>{
             <div className="profilerun flex ">
                 <div className="elementProfile">
                    <p className='font-bold pt-8 text-center text-2xl'>Create Your Restaurant Profile</p>
+                   
                    <div 
                    onClick={()=> setStep(1)}
                    className="options flex ml-10 mt-10 cursor-pointer">
