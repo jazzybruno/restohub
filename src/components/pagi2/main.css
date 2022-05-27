@@ -1,0 +1,74 @@
+.all-menu{
+    width: 100vw;
+    height: 100vh;
+    background-color: #e7eeee;
+    display: grid;
+    grid-template-columns: 14% 84%;
+    gap: 1%;
+} 
+.next{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns:10% 70% 20%;
+    background-color: white;
+    margin-top: 6rem;
+    border-radius: 0.5rem;
+    padding:1rem ;
+    padding-bottom: 1rem;
+} 
+
+/* ============================boxes ================================================= */
+.box{
+    width: 7rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    margin-top: 2.5rem;
+    border: 2.5px solid #d5e7118e;
+    color: black;
+    text-align: center;
+    padding: 2rem 0rem;
+}
+.box-class{
+    display: flex;
+    gap: 3.7rem;
+    margin-left: 1rem;
+}
+.box:hover{
+    background-color:#d5e7118e;
+    border-radius: 0.5rem;
+    color: white;
+}
+
+@media screen and(max-width:900px){
+    .all-menu{
+        display: grid;
+        grid-template-columns: 20% 80%;
+        gap: 1%;
+    } 
+    .next{
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns:20% 80% ;
+        background-color: white;
+        margin-top: 6rem;
+        border-radius: 0.5rem;
+        padding:1rem ;
+        padding-bottom: 1rem;
+    } 
+    
+    /* ============================boxes ================================================= */
+    .box{
+        width: 7rem;
+        height: 5rem;
+        border-radius: 0.5rem;
+        margin-top: 2.5rem;
+        border: 2.5px solid #d5e7118e;
+        color: black;
+        text-align: center;
+        padding: 2rem 0rem;
+
+    }
+    
+}
