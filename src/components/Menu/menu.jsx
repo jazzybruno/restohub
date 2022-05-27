@@ -48,9 +48,9 @@ function sortAll() {
           <div>
           <p className="font-bold text-xl ml-10 pt-10">Menus</p>
          <p  className="font-light text-xl ml-10 mt-4">as of 25 May 2021</p>
-          </div>
+          </div>  
           <div className="theavailable flex mt-10 gap-5 ml-3">
-              <button onClick={sortDrink}> </button>
+              <button onClick={sortDrink}>Drinks</button>
               <button onClick={sortStarter}>Starter</button>
               <button  onClick={sortAppertizer}>Appetizer</button>
               <button  onClick={sortDessert}>Dessert</button>
@@ -62,7 +62,7 @@ function sortAll() {
          {menu.length === 0 ? <Error img={img} title="Empty" message="There are no menus available of this type" /> : menu.map(v=> <MenuList key={v.id} img={v.img} title={v.title} desc={v.desc} money={v.money} />)}
           </div>
 
-          <div className="newMenu h-96 w-[25%] ml-6 mt-20 float-left">
+          <div className="newMenu h-96 w-[25%] mb-10 ml-6 mt-20 float-left">
             <p className='font-bold text-xl text-left ml-10 mt-10'>Add Item</p>
             <div className="createit flex">
               <p className='ml-10 mt-10 font-light'>Create new menu item</p>
