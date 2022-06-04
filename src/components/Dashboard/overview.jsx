@@ -26,7 +26,7 @@ const Overview = () => {
             <Chart />
           </div>
 
-          <div className="stats ml-48 mb-20 mt-20">
+          <div className="stats ml-48 mb-20 mt-24">
             <p className="mt-8 text-xl font-normal">Orders</p>
             <p className="amount">67890</p>
             <p className="mt-5 text-xl font-normal">Items</p>
@@ -39,8 +39,8 @@ const Overview = () => {
         </div>
 
         <div className="overlast flex mx-64 w-[70%] ">
-          <div>
-            <div className="types1 flex gap-40 ">
+          <div className="mt-10 ml-10">
+            <div className="types1 flex  gap-40 ">
               {Data_last.map((items) => (
                 <Types
                   name={items.name}
@@ -65,7 +65,7 @@ const Overview = () => {
               ))}
             </div>
           </div>
-          <div className="new w-[20vw] bg-white h-[47vh] ml-[31vh] mr-[-120px]  mt-10">
+          <div className="new w-[16vw] bg-white h-[47vh] ml-[23vh] mr-[-120px]  mt-10">
               <div className="flex ">
                   <p className="mr-auto ml-5 mt-7 font-bold  text-xl">Create</p>
                   <p className="mr-5 mt-7 font-light text-xl">View All</p>
