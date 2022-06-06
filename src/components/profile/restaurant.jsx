@@ -21,7 +21,7 @@ const Profile = ()=>{
                        <div className="numberProfile mr-10"><p className='text-center' >1</p></div>
                        <div className="descProfile">
                            <p className='font-bold text-xl'>Restaurant information</p>
-                           <p className='text-lg'>restaurant name and address</p>
+                           <p className='text-lg'>Restaurant Name and Address</p>
                        </div>
                    </div>
 
@@ -31,7 +31,7 @@ const Profile = ()=>{
                        <div className="numberProfile mr-10"><p className='text-center' >2</p></div>
                        <div className="descProfile">
                            <p className='font-bold text-xl'>Restaurant Type and timing</p>
-                           <p className='text-lg'>establishment and cuisine type</p>
+                           <p className='text-lg'>Establishment and Cuisine type</p>
                        </div>
                    </div>
 

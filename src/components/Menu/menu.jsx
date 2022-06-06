@@ -8,9 +8,11 @@ import plus from '../images/plus.png'
 import Error from '../UI/error';
 import img from '../images/empty.gif'
 
+
 const Menu = ()=>{
 const [menu , setMenu] = useState(data)
-const [type , setType] = useState("")
+const [type , setType] = useState("");
+
   
 function sortDrink() {
   setType("Drink")
@@ -34,6 +36,7 @@ function sortDessert() {
   
 }
 
+
 function sortAll() {
   setType("All")
   setMenu(data)
@@ -46,8 +49,9 @@ function sortAll() {
         <div className="menus bg-white mt-20 ml-[10%]  rouded-xl ">
          <div className="upperpart flex" >
           <div>
+            {type}
           <p className="font-bold text-xl ml-10 pt-10">Menus</p>
-         <p  className="font-light text-xl ml-10 mt-4">as of 25 May 2021</p>
+         <p  className="font-light text-xl ml-10 mt-4">As of 25 May 2021</p>
           </div>  
           <div className="theavailable flex mt-10 gap-5 ml-3">
               <button onClick={sortDrink}>Drinks</button>
