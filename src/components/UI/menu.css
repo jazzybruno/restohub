@@ -1,4 +1,4 @@
-.menu {
+.menuui {
   width: 800px;
   height: 110px;
   background: rgba(239, 247, 248, 0.65);
@@ -11,13 +11,16 @@
   margin-bottom: 20px;
 }
 
-.menu :nth-child(1) img {
+.menuui :nth-child(1) img {
+  border-radius: 10px;
   width: 79px;
   height: 85px;
-  left: 636px;
+  left: 640px;
   top: 369px;
-  padding-left: 15px;
+  padding-left: 2px;
   padding-top: 12px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .desc {

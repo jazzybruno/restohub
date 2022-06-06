@@ -3,9 +3,9 @@ import "./menu.css";
 
 const Menu = (props) => {
   return (
-    <div className="menu">
+    <div className="menuui">
       <div>
-        <image   src={props.img} alt="Menu imae" />
+        <img src={props.img} alt="Menu pictures "/>
       </div>
       <div className="desc">
         <div>{props.title}</div>

@@ -1,4 +1,4 @@
-import menu from "../images/menulist.png";
+import menu from "../images/menupic.webp";
 
 const data = [
   {

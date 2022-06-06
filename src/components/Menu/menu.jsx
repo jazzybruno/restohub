@@ -62,7 +62,7 @@ function sortAll() {
           </div>
          </div>
         <div className="flex">
-        <div className="menulist ml-48 mt-10" >
+        <div className="menul ist ml-48 mt-10" >
          {menu.length === 0 ? <Error img={img} title="Empty" message="There are no menus available of this type" /> : menu.map(v=> <MenuList key={v.id} img={v.img} title={v.title} desc={v.desc} money={v.money} />)}
           </div>
 

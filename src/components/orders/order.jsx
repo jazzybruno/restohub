@@ -46,6 +46,7 @@ const Order = () => {
               {order.length === 0 ? <Error img={img} title="Empty" message="There are no orders available of this type" /> : order.map((v) => (
                 <Odd
                   key={v.number}
+                  img={v.img}
                   number={v.number}
                   title={v.title}
                   desc={v.desc}
@@ -73,7 +74,7 @@ const Order = () => {
               <div className="flex">
                 <p className="ml-10 mt-6 text-xl ">Create New order</p>
                 <img
-                  className="h-7 w-7 ml-32 mt-5 cursor-pointer"
+                  className="h-7 w-7 ml-32 rounded-md mt-5 cursor-pointer"
                   src={add}
                   alt="addOrder"
                 />
@@ -124,7 +125,7 @@ const Order = () => {
                     <label className="ml-10 text-[140%]" htmlFor="">
                       Dessert
                     </label>
-                    <button className="orderButton  ml-36">New</button>
+                    <button className="orderButton mb-5 ml-36">New</button>
                   </div>
                 </form>
               </div>
