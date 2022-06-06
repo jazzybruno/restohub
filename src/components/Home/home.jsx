@@ -2,7 +2,7 @@ import React from 'react'
 import './home.css'
 import Landing from '../UI/landing'
 import data  from './data'
-import Footer from '../UI/footer'
+// import Footer from '../UI/footer'
 
 const Home =  ()=>{
     return (
@@ -22,7 +22,7 @@ const Home =  ()=>{
            <div className="reusable">
            {data.map(v=> <Landing img={v.img} width="100px" title={v.title} desc={v.desc} />)}
            </div>
-           <Footer />
+           {/* <Footer /> */}
         </div>
         
     )

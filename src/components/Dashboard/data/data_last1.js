@@ -15,7 +15,7 @@ const Data_last1 =   [
 }, {
     
     name:"Cafes",
-    sale:"sale",
+    sale:"sale12",
     details:"view details",
     amount: "390857600 RWF",
     type:"Aroma",
