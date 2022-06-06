@@ -45,7 +45,6 @@
     right:760px;
     border: 1px solid #656372;
     border-radius:5px;
-    /* height:40px; */
     padding: 12px;
     background-color: #E7E4FF;
     color:black;
@@ -107,14 +106,14 @@ h3{
     position:relative;
     bottom:70px;
     /* right:30px */
-    left:540px;
+    left:560px;
 }
 
 
 .column3{
     position:relative;
     bottom:220px;
-    left:859px;
+    left:950px;
     
 }
 
@@ -159,7 +158,7 @@ h3{
 .column4{
     position: relative;
     bottom:396px;
-    left:1350px;
+    left:1500px;
 }
 .column4 p{
     position: relative;
