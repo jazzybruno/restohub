@@ -1,6 +1,56 @@
-import React from "react";
+import {React , useState } from "react";
 import "./logIn.css";
+import axios from 'axios';
+import { BrowserRouter , Route , Routes , Link , Navigate } from 'react-router-dom'
+
 function SignUp() {
+
+    const api = axios.create({
+      baseURL: `https://backend.supamenu.rw`
+    })
+
+   const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
+    const [phone, setPhone] = useState("");
+
+    const dataHandler = (e) => {
+        e.preventDefault();
+        const data={
+            email: email,
+            password: password,
+            firstName: firstName,
+            lastName: lastName,
+            phone: phone
+        }
+
+        api.post("/supapp/api/auth/admin/signup" , {
+          
+            "email": email,
+            "firstName": firstName,
+            "lastName": lastName,
+            "mobile": phone,
+            "password": password
+          
+        })
+        .then(function (response){
+          setEmail("")
+        setPhone("")
+        setFirstName("")
+        setLastName("")
+        setPassword("")
+            console.log(response.data);
+         <Navigate to="/overview"/>
+
+        })
+        .catch(function (error){
+          console.log(error.details);
+        })
+
+        
+    }
+
   return (
     <div id="bgSignUp" className=" flex justify-between w-full h-[100vh]">
       <div>
@@ -17,9 +67,11 @@ function SignUp() {
             Sign Up to Resto<span>Hub</span>
           </h2>
         </div>
-        <form className="" action="/overview">
+        <form className="" action="/overview" onSubmit={dataHandler}>
           <label className=" login2 px-5 py-2 ">First Name</label> <br />
           <input
+          value={firstName}
+             onChange={(e) => setFirstName(e.target.value)}
             className="login3 border-2   mx-[15%] px-5 py-2 mb-[2%] mt-[5px] md:w-[400px] sm:w-[30px]"
             name="fname"
             placeholder="Enter First Name"
@@ -28,12 +80,16 @@ function SignUp() {
           <label className=" login2 px-5  ">Last Name</label>
           <br />
           <input
+          value={lastName}
+            onChange={(e) => setLastName(e.target.value)}
             className="login3 px-5 h-14 py-[5px] mb-[2%]   mx-[15%] mt-[5px] border-2 md:w-[400px] sm:w-[30px] "
             name="fname"
             placeholder="Enter Last Name"
           />
           <label  className=" login4   ">Phone</label> <br />
           <input
+          value={phone}
+            onChange={(e) => setPhone(e.target.value)}
             className=" login3 border-2 h-14  mx-[15%] px-5 py-2 mb-[2%] mt-[5px] w-[400px] "
             name="fname"
             placeholder="Enter Phone Number"
@@ -42,6 +98,8 @@ function SignUp() {
           <label className=" login4   ">Email</label>
           <br />
           <input
+          value={email}
+            onChange={(e) => setEmail(e.target.value)}
             className=" login5 px-5 h-14 py-[5px]  mx-[15%] mb-[2%]  mt-[5px] border-2 w-[400px]"
             name="fname"
             placeholder="Email Adress"
@@ -49,12 +107,15 @@ function SignUp() {
           <label className=" login2 ml-[5rem] ">Password</label>
           <br />
           <input
+          value={password}
+            onChange={(e) => setPassword(e.target.value)}
             className=" login3 px-5 h-14 py-[5px] mb-[2%]  mx-[15%] mt-[5px] border-2  w-[400px] "
             name="fname"
             placeholder="Enter your Password"
           />
           <div className=" flex justify-center content-center  ">
             <input
+             action="/overview"
               type="submit"
               className=" login3 bg-[#B3C10F] h-14  text-xl    text-white text-1.5xl mt-[25px] mb-[10px]  w-[400px] "
               value="Sign Up"
