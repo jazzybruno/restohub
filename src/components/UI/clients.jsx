@@ -1,6 +1,7 @@
 import React from "react";
 import "./clients.css";
 
+
 const Client = (props) => {
   return (
     <div className="client">
@@ -18,6 +19,7 @@ const Client = (props) => {
       <div className="type">
         <button className="button">{props.type}</button>
       </div>
+
     </div>
   );
 };
