@@ -15,7 +15,7 @@ function LogIn() {
             Log In to Resto<span>Hub</span>
           </h2>
         </div>
-        <form className=" mt-10" action="/overview" >
+        <form className=" mt-10 ml-10 " action="/overview" >
           <label className="login p-5">Email</label> <br />
           <input
             className=" login1 px-5  py-[10px] mb-[5px] mt-2 text-xl  mx-10 border-2 md:w-[400px] sm:w-[30px] h-[50px] "
@@ -33,11 +33,12 @@ function LogIn() {
           <div className=" flex justify-center content-center  ">
             <input
               type="submit"
-              className="bg-[#B3C10F]  mt-10 text-white text-2xl my-[30px]  md:w-[400px] sm:w-[50px] h-[50px] "
+              className="bg-[#B3C10F] mr-[10%] rounded-md mt-10 text-white text-2xl my-[30px]  md:w-[400px] sm:w-[50px] h-[50px] "
               value="Log In"
             />
           </div>
-          <h2 className="text-center text-xl mt-5">
+         <div className="mr-[15%]">
+         <h2 className="text-center text-xl mt-5">
             Don't have an Account?{" "}
             <a href="/signup" > <span className="text-[#B3C10F] font-bold ">Sign Up</span></a>
           </h2>
@@ -45,6 +46,7 @@ function LogIn() {
             Forgot Password{" "}
             <a href="/reset" ><span className="text-[#B3C10F] font-bold  text-xl">Reset</span></a>
           </h2>
+         </div>
         </form>
       </div>
     </div>
