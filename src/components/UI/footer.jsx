@@ -13,8 +13,8 @@ import {BsFacebook} from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <div className="footer">
-        <div className="column1">
+    <div className="footer ">
+        <div className="column1 ml-20">
         <img  className="logo" src={logo} alt="no images" />
         <p>KG 031 St, Kigali, Kacyiru</p>
             <div className="flex ml-[-1.3%]">
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
         </div>
 
-        <div className="column2">
+        <div className="column2 ml-28">
             <h3>Quick Links</h3>
             <ul>
                 <a href='#' className="about">About us</a>
@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
 
-        <div className="column3">
+        <div className="column3 ml-28">
             <h3>Contacts</h3>
             <ul>
                 <BsTelephone className="tel" /><a href='#' className="phone">+250788332299</a>
@@ -44,7 +44,7 @@ const Footer = () => {
             </ul>
         </div>
 
-        <div className="column4">
+        <div className="column4 ml-28">
             <h3>Mobile App</h3>
             <p>Available on:</p>
             <GrApple className="apple"/><a href='#' className="app-store">App Store</a>
