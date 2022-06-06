@@ -9,6 +9,7 @@ import {HiOutlineMail} from 'react-icons/hi';
 import {GoLocation} from 'react-icons/go';
 import {GrApple} from 'react-icons/gr';
 import {FaGooglePlay} from 'react-icons/fa';
+import {BsFacebook} from 'react-icons/bs';
 
 const Footer = () => {
   return (
@@ -16,9 +17,11 @@ const Footer = () => {
         <div className="column1">
         <img  className="logo" src={logo} alt="no images" />
         <p>KG 031 St, Kigali, Kacyiru</p>
-        <BsInstagram className="instagram"/>
-        <FiFacebook className="facebook"/>
-        <AiOutlineYoutube className="youtube"/>
+            <div className="flex ml-[-1.3%]">
+            <BsInstagram className='instagram12'/>
+            <BsFacebook className="facebook mt-4"/>
+        <AiOutlineYoutube className="youtube mt-10" />
+        </div>
         </div>
 
         <div className="column2">
