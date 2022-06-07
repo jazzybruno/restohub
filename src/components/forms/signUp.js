@@ -63,7 +63,7 @@ function SignUp() {
               text: password,
               icon: "error",
             });
-           }
+           }  
 
            if(email){
             swal({
