@@ -2,8 +2,10 @@ import {React , useState } from "react";
 import "./logIn.css";
 import axios from 'axios';
 import swal from 'sweetalert';
+import { useNavigate } from "react-router-dom";
 
 function SignUp() {
+  const navigate = useNavigate()
 
     const api = axios.create({
       baseURL: `https://backend.supamenu.rw`
@@ -35,6 +37,7 @@ function SignUp() {
           
         })
         .then(function (response){
+         
           setEmail("")
         setPhone("")
         setFirstName("")
@@ -46,6 +49,10 @@ function SignUp() {
               title: "Great!!",
               text: message,
               icon: "success",
+            }).then(() => {
+              console.log("success");
+              navigate("/login")
+              
             });
             console.log(response.data.message);
 
