@@ -13,9 +13,9 @@ import {BsFacebook} from 'react-icons/bs';
 
 const Footer = () => {
   return (
-    <div className="footer ">
-        <div className="column1 ml-20">
-        <img  className="logo" src={logo} alt="no images" />
+    <div className="footer">
+        <div className="column12 ml-20">
+        <img  className="logo12" src={logo} alt="no images" />
         <p>KG 031 St, Kigali, Kacyiru</p>
             <div className="flex ml-[-1.3%]">
             <BsInstagram className='instagram12'/>

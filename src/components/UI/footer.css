@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -18,14 +19,14 @@
     position: relative;
     top:80px;
 }
-.logo{
+.logo12{
     width: 130px;
     position: relative;
     top:120px;
     right: 800px;
   
 }
-.column1 p{
+.column12 p{
     position:relative;
     top:110px;
     right:800px;
@@ -96,7 +97,7 @@ ul{
     
 }
 
-.column1{
+.column12{
     /* margin-left: 150px; */
     position: relative;
     left:950px;
