@@ -373,3 +373,12 @@ display: block;
     width: 22.3vw;
   }
 }
+
+.swal-overlay {
+  background-color: rgba(30, 34, 33, 0.75);
+}
+
+.swal-modal{
+  height: 50vh;
+  width: 50vw;
+}

@@ -1,7 +1,7 @@
 import {React , useState } from "react";
 import "./logIn.css";
 import axios from 'axios';
-import { BrowserRouter , Route , Routes , Link , Navigate } from 'react-router-dom'
+import swal from 'sweetalert';
 
 function SignUp() {
 
@@ -40,19 +40,56 @@ function SignUp() {
         setFirstName("")
         setLastName("")
         setPassword("")
-            console.log(response.data);
-         <Navigate to="/overview"/>
+        const message = response.data.message
+            JSON.stringify(message)
+            swal({
+              title: "Great!!",
+              text: message,
+              icon: "success",
+            });
+            console.log(response.data.message);
 
         })
         .catch(function (error){
-          console.log(error.details);
+          let password = error.response.data.apierror.details.password
+          let email = error.response.data.apierror.details.email
+          let phone = error.response.data.apierror.details.mobile
+          JSON.stringify(password)
+          JSON.stringify(email)
+          JSON.stringify(phone)
+           if(password){
+            swal({
+              title: "Error",
+              text: password,
+              icon: "error",
+            });
+           }
+
+           if(email){
+            swal({
+              title: "Error",
+              text: email,
+              icon: "error",
+            });
+           }
+
+           if(phone){
+            swal({
+              title: "Error",
+              text: phone,
+              icon: "error",
+            });
+           }
+         
+           console.log(error.response.data.apierror.details);
+
         })
 
         
     }
 
   return (
-    <div id="bgSignUp" className=" flex justify-between w-full h-[100vh]">
+    <div id="bgSignUp" className=" flex justify-between w-full h-[100vh] ">
       <div>
         <h1 className="text-6xl text-white  font-[bold] pl-[300px]">
           Resto<span className="text-[#B3C10F]">Hub</span>
@@ -70,6 +107,7 @@ function SignUp() {
         <form className="" action="/overview" onSubmit={dataHandler}>
           <label className=" login2 px-5 py-2 ">First Name</label> <br />
           <input
+          required
           value={firstName}
              onChange={(e) => setFirstName(e.target.value)}
             className="login3 border-2   mx-[15%] px-5 py-2 mb-[2%] mt-[5px] md:w-[400px] sm:w-[30px]"
@@ -80,6 +118,7 @@ function SignUp() {
           <label className=" login2 px-5  ">Last Name</label>
           <br />
           <input
+          required
           value={lastName}
             onChange={(e) => setLastName(e.target.value)}
             className="login3 px-5 h-14 py-[5px] mb-[2%]   mx-[15%] mt-[5px] border-2 md:w-[400px] sm:w-[30px] "
@@ -88,6 +127,7 @@ function SignUp() {
           />
           <label  className=" login4   ">Phone</label> <br />
           <input
+          required
           value={phone}
             onChange={(e) => setPhone(e.target.value)}
             className=" login3 border-2 h-14  mx-[15%] px-5 py-2 mb-[2%] mt-[5px] w-[400px] "
@@ -98,6 +138,7 @@ function SignUp() {
           <label className=" login4   ">Email</label>
           <br />
           <input
+          required
           value={email}
             onChange={(e) => setEmail(e.target.value)}
             className=" login5 px-5 h-14 py-[5px]  mx-[15%] mb-[2%]  mt-[5px] border-2 w-[400px]"
@@ -107,6 +148,7 @@ function SignUp() {
           <label className=" login2 ml-[5rem] ">Password</label>
           <br />
           <input
+          required
           value={password}
             onChange={(e) => setPassword(e.target.value)}
             className=" login3 px-5 h-14 py-[5px] mb-[2%]  mx-[15%] mt-[5px] border-2  w-[400px] "
