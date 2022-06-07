@@ -174,8 +174,6 @@ label{
 }
 button:hover{
   cursor: pointer;
-  border: 10px solid #B3C10F;
-  box-shadow: 3px 3px 10px 1px rgba(66, 61, 61, 0.3);
 }
 
 .grouped-inputs {
@@ -372,4 +370,17 @@ display: block;
   .grouped-inputs input {
     width: 22.3vw;
   }
+}
+
+.swal-overlay {
+  background-color: rgba(30, 34, 33, 0.75);
+}
+
+.swal-modal{
+  height: 50vh;
+  width: 50vw;
+}
+
+.swal-button{
+  background-color: #B3C10F;
 }
