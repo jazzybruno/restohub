@@ -1,6 +1,17 @@
 import React from "react";
 import "./logIn.css";
+import swal from 'sweetalert';
+
 function LogIn() {
+
+  const yetHandler = ()=>{
+    swal({
+      title: "Feature Missing!",
+      text: "The resestting password feature is not available now but will be in future!",
+      icon: "error",
+    });
+  }
+
   return (
     <div id="bgLogIn">
       <div classname="logo">
@@ -44,7 +55,7 @@ function LogIn() {
           </h2>
           <h2 className="text-center pb-5 pt-3 text-xl">
             Forgot Password{" "}
-            <a href="/reset" ><span className="text-[#B3C10F] font-bold  text-xl">Reset</span></a>
+            <a href="#" ><span onClick={yetHandler} className="text-[#B3C10F] font-bold  text-xl">Reset</span></a>
           </h2>
          </div>
         </form>

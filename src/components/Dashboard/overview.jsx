@@ -19,7 +19,7 @@ const Overview = () => {
         <NavBar />
         <div className="views flex gap-24 mx-28  mt-10">
           {Data.map((v) => (
-            <View img={v.img} title={v.title} amount={v.amount} />
+            <View key={v.id} img={v.img} title={v.title} amount={v.amount} />
           ))}
         </div>
         <div className="chart flex  mt-10 ">
@@ -44,6 +44,7 @@ const Overview = () => {
             <div className="types1 flex  gap-40 ">
               {Data_last.map((items) => (
                 <Types
+                key={items.id}
                   name={items.name}
                   sale={items.sale}
                   details={items.details}
@@ -56,6 +57,7 @@ const Overview = () => {
             <div className="types2 flex gap-40 ">
               {Data_last1.map((items) => (
                 <Types
+                key={items.id}
                   name={items.name}
                   sale={items.sale}
                   details={items.details}
