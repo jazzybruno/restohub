@@ -34,27 +34,27 @@ const App = () => {
         <Route path="/signup" element={<SignUp />}></Route>
         <Route
           path="/clients/new"
-          element={isLoggedIn ? <AddClient />  :  <Navigate to="/" />}
+          element={isLoggedIn ? <AddClient />  :  <Navigate to="/login" />}
         ></Route>
         <Route
           path="/overview"
-          element={isLoggedIn  ? <Overview /> :   <Navigate to="/" />}
+          element={isLoggedIn  ? <Overview /> :   <Navigate to="/login" />}
         ></Route>
         <Route
           path="/clients"
-          element={isLoggedIn ? <Clients /> :  <Navigate to="/" />}
+          element={isLoggedIn ? <Clients /> :  <Navigate to="/login" />}
         ></Route>
         <Route
           path="/menu"
-          element={isLoggedIn ? <Menu /> :  <Navigate to="/" />}
+          element={isLoggedIn ? <Menu /> :  <Navigate to="/login" />}
         ></Route>
         <Route
           path="/orders"
-          element={isLoggedIn ? <Order />  :   <Navigate to="/" />}
+          element={isLoggedIn ? <Order />  :   <Navigate to="/login" />}
         ></Route>
         <Route
           path="/profile"
-          element={isLoggedIn ?  <Profile /> :  <Navigate to="/" />}
+          element={isLoggedIn ?  <Profile /> :  <Navigate to="/login" />}
         ></Route>
       </Routes>
       <Footer />
