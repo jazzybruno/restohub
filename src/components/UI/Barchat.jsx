@@ -43,15 +43,9 @@ import {
       {
         label: 'Orders',
         data: [40,20,120,40,60,30,70],
-        backgroundColor: '#8fd9e4',
-      },
-
-      {
-        label: 'Menu',
-        data: [50,30,110,30,70,30,70],
         backgroundColor: '#66ff66',
-
       },
+
 
       {
         label: 'Clients',
