@@ -1,0 +1,34 @@
+*{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+/* =========================== user menu ========================= */
+.users-all{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #E7EEEE;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.users-all>img{
+    width: 3rem;
+    height: 3rem;
+    background-color: rgba(255, 255, 255, 0.796);
+    border-radius: 4rem;
+}
+.users-all>div{
+    margin-top: 1.3rem
+}
+.users-all>div>h5{
+    font-size: 1rem;
+    margin:1rem 0rem;
+    color: #d5e7118e;
+}
+
