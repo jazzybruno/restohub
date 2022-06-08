@@ -9,6 +9,10 @@ import Data_last1 from "./data/data_last1";
 import plus from "../images/plus.png";
 import SideBar from "./sidebar";
 import NavBar from "./navbar";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
+import { GiDeliveryDrone } from "react-icons/gi";
+import { FaShoppingBag } from "react-icons/fa";
+import { AiOutlineFieldTime } from "react-icons/ai";
 
 
 const Overview = () => {
@@ -27,27 +31,10 @@ const Overview = () => {
             <Chart />
           </div>
 
-        <div>
-        {/* <div className="stats ml-48 mb-20 mt-24">
-            <p className="mt-8 text-xl font-normal">Orders</p>
-            <p className="amount">67890</p>
-            </div>
-            <div className="stats ml-48 mb-20 mt-24">
-            <p className="mt-5 text-xl font-normal">Items</p>
-            <p className="amount">67890</p>
-            </div>
-            <div className="stats ml-48 mb-20 mt-24">
-            <p className="mt-5 text-xl font-normal">Clients</p>
-            <p className="amount">67890</p>
-            </div>
-            <div className="stats ml-48 mb-20 mt-24">
-            <p className="mt-5 text-xl font-normal">Order/Hour</p>
-            <p className="amount">67890</p>
-          </div> */}
-        </div>
+       
         </div>
 
-        <div className="overlast flex mx-64 w-[70%] ">
+        <div className="overlast flex mx-32 w-[70%] ">
           <div className="mt-10 ml-10">
             <div className="types1 flex  gap-40 ">
               {Data_last.map((items) => (
@@ -75,8 +62,37 @@ const Overview = () => {
                 />
               ))}
             </div>
+
           </div>
-          <div className="new w-[16vw] bg-white h-[47vh] ml-[23vh] mr-[-120px]  mt-10">
+      
+          <div>
+         <div className="flex gap-40 ml-20 mt-[3.7rem]">
+         <div className="stats  mb-20 ">
+           <GiDeliveryDrone className="iconsSide text-black mx-[auto] mt-5 mb-[-5px]" />
+            <p className="mt-8 text-xl font-normal ">Orders</p>
+            <p className="amount">67890</p>
+            </div>
+            <div className="stats  mb-20">
+              <FaShoppingBag className="iconsSide text-black mx-[auto] mt-5" />
+            <p className="mt-5 text-xl font-normal">Items</p>
+            <p className="amount">67890</p>
+            </div>
+         </div>
+            <div className="flex gap-40 ml-20">
+            <div className="stats  mb-20">
+              <AiOutlineUsergroupAdd className="iconsSide text-black mx-[auto] mt-5" />
+            <p className="mt-5 text-xl font-normal">Clients</p>
+            <p className="amount">67890</p>
+            </div>
+            <div className="stats  mb-20">
+              <AiOutlineFieldTime className="iconsSide text-black mx-[auto] mt-5" />
+            <p className="mt-5 text-xl font-normal">Order/Hour</p>
+            <p className="amount">67890</p>
+          </div>
+            </div>
+        </div>
+        </div>
+        {/* <div className="new w-[16vw] bg-white h-[47vh] ml-[23vh] mr-[-120px]  mt-10">
               <div className="flex ">
                   <p className="mr-auto ml-5 mt-7 font-bold  text-xl">Create</p>
                   <p className="mr-5 mt-7 font-light text-xl">View All</p>
@@ -107,8 +123,7 @@ const Overview = () => {
                   </div>
               </form>
               </div>
-          </div>
-        </div>
+          </div> */}
       </div>
     </div>
   );

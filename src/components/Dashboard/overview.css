@@ -32,6 +32,7 @@
   position: sticky;
   top: 0px;
   z-index: 10;
+  /* transform: scale(0.9); */
 }
 
 .serch {
@@ -48,12 +49,12 @@
 .stats{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
-  width: 20%;
+  width: 22vh;
+  height: 17vh;
   background-color: #fff;
   align-items: center;
   justify-content: center;
   text-align: center;
-  transform: scale(1.3 , 1.3);
 }
 
 .amount{
@@ -62,7 +63,7 @@
 }
 
 .chart{
-margin-left: 15%;
+margin-left: 8%;
 margin-top: 6%;
 }
 
@@ -292,7 +293,7 @@ margin-left: 10px;
 background-color: #b3c10f;
 border-radius: 10px;
 padding: 10px;
-padding-left: -20px;
+padding: 10px;
 transition: ease-in 0.2s;
 /* color: black; */
 }
@@ -305,10 +306,3 @@ transition: ease-in 0.2s;
   /* padding-left: -20px; */
  
 
-.ease-in{
-  transition-timing-function: cubic-bezier(.4,0,1,1)
-}
-
-.duration{
-  transition-duration: 3s;
-}
