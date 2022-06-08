@@ -41,9 +41,23 @@ import {
     datasets: [
 
       {
-        label: 'Dataset 2',
-        data: [50,20,120,40,80,30,70],
-        backgroundColor: '#b3c10f',
+        label: 'Orders',
+        data: [40,20,120,40,60,30,70],
+        backgroundColor: '#8fd9e4',
+      },
+
+      {
+        label: 'Menu',
+        data: [50,30,110,30,70,30,70],
+        backgroundColor: '#66ff66',
+
+      },
+
+      {
+        label: 'Clients',
+        data: [60,40,100,20,80,30,70],
+        backgroundColor: '#00ff99',
+
       },
     ],
   }

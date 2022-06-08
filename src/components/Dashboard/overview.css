@@ -305,3 +305,10 @@ transition: ease-in 0.2s;
   /* padding-left: -20px; */
  
 
+.ease-in{
+  transition-timing-function: cubic-bezier(.4,0,1,1)
+}
+
+.duration{
+  transition-duration: 3s;
+}

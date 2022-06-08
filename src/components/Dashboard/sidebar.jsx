@@ -11,7 +11,7 @@ import { FiSettings } from "react-icons/fi";
 
 const SideBar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar h-full">
       <div className="logo mx-10">
         <img src={logo} alt="The logo of the app" />
         <div></div>
