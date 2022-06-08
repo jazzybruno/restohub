@@ -4,7 +4,8 @@
 
 .mainmenu {
   background-color: #eff4f4;
-  width: 82%;
+    /* height: 160vh; */
+    width: 100%;
 }
 
 .menus {
