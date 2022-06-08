@@ -6,7 +6,7 @@
   border-radius: 10px;
   margin-top: 19px;
   margin-left: 46px;
-  transform: scale(1.5,1.5);
+  /* transform: scale(1.5,1.5); */
 }
 
 .view :nth-child(1) {

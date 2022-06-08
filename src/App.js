@@ -12,7 +12,7 @@ import Profile from "./components/profile/restaurant";
 import Footer from "./components/UI/footer";
 
 const App = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   const loggedInHandlerfalse = (val) => {
     setIsLoggedIn(val);

@@ -4,8 +4,9 @@
 
 
 .othercontent{
-    background-color: #eff4f4;
-    width: 82%;
+  background-color: #eff4f4;
+  /* height: 160vh; */
+  width: 100%;
 }   
 
 .buttonOrder button{

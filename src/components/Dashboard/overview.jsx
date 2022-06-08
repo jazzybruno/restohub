@@ -22,21 +22,29 @@ const Overview = () => {
             <View key={v.id} img={v.img} title={v.title} amount={v.amount} />
           ))}
         </div>
-        <div className="chart flex  mt-10 ">
-          <div className="chartreal w-1/2">
+        <div className="chart  mt-10 ">
+          <div className="chartreal w-[85%]">
             <Chart />
           </div>
 
-          <div className="stats ml-48 mb-20 mt-24">
+        <div>
+        {/* <div className="stats ml-48 mb-20 mt-24">
             <p className="mt-8 text-xl font-normal">Orders</p>
             <p className="amount">67890</p>
+            </div>
+            <div className="stats ml-48 mb-20 mt-24">
             <p className="mt-5 text-xl font-normal">Items</p>
             <p className="amount">67890</p>
+            </div>
+            <div className="stats ml-48 mb-20 mt-24">
             <p className="mt-5 text-xl font-normal">Clients</p>
             <p className="amount">67890</p>
+            </div>
+            <div className="stats ml-48 mb-20 mt-24">
             <p className="mt-5 text-xl font-normal">Order/Hour</p>
             <p className="amount">67890</p>
-          </div>
+          </div> */}
+        </div>
         </div>
 
         <div className="overlast flex mx-64 w-[70%] ">

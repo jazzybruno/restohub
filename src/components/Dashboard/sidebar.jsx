@@ -1,71 +1,47 @@
 import React from "react";
 import logo from "../images/logo.png";
 import "./overview.css";
-import overview from "../images/over.png";
-import menu from "../images/menu.png";
-import orders from "../images/orders.png";
-import profile from "../images/profile.png";
-import users from "../images/users.png";
-import table from "../images/table.png";
-import settings from "../images/Settings.png";
-import clients from "../images/clients.png";
+
+import { AiFillDashboard } from "react-icons/ai";
+import { AiOutlineUsergroupAdd } from "react-icons/ai";
+import { MdOutlineRestaurantMenu } from "react-icons/md";
+import { GiDeliveryDrone } from "react-icons/gi";
+import { CgProfile } from "react-icons/cg";
+import { FiSettings } from "react-icons/fi";
 
 const SideBar = () => {
   return (
-    <div className="sidebar">
+    <div className="sidebar h-full">
       <div className="logo mx-10">
         <img src={logo} alt="The logo of the app" />
+        <div></div>
 
-        <a href="/overview">
-          <div className="over flex">
+        <a className="overlink " href="/overview">
+          <span className="text-white  flex gap-3">
             {" "}
-            <img src={overview} alt="" />{" "}
-            <p className="text-white my-auto  mx-auto text-xl">Overview</p>
-          </div>
+            <AiFillDashboard className="iconsSide" /> Overview
+          </span>
         </a>
 
-        <a href="/clients">
-          <div className="over flex">
-            {" "}
-            <img src={clients} alt="" />{" "}
-            <p className="text-white my-auto  mx-auto text-xl">Clients</p>
-          </div>
+        <a className="overlink" href="/clients">
+          <span className="text-white  flex gap-3">
+            <AiOutlineUsergroupAdd className="iconsSide" /> Clients
+          </span>
         </a>
 
-       
-          <div className="over flex">
-            {" "}
-            <img src={table} alt="" />{" "}
-            <p className="text-white my-auto  mx-auto text-xl">Table</p>
-          </div>
-       
-
-        <a href="/menu">
-          <div className="over flex">
-            {" "}
-            <img src={menu} alt="" />{" "}
-            <p className="text-white my-auto  mx-auto text-xl">Menu</p>
-          </div>
+        <a className="overlink" href="/menu">
+          <span className="text-white  flex gap-3">
+            <MdOutlineRestaurantMenu className="iconsSide" /> Menu
+          </span>
         </a>
 
-      
-          <div  className=" over flex mt-5">
-            {" "}
-            <img src={users} alt="" />{" "}
-            <p className="text-white my-auto  mx-auto text-xl">Users</p>
-          </div>
-       
-
-        <a href="/orders">
-          <div className="over flex mt-5">
-            {" "}
-            <img src={orders} alt="" />{" "}
-            <p className="text-white my-auto  mx-auto text-xl">Orders</p>
-          </div>
+        <a className="overlink" href="/orders">
+          <span className="text-white  flex gap-3">
+            <GiDeliveryDrone className="iconsSide" /> Orders
+          </span>
         </a>
 
-       
-          <div className="over flex">
+        {/* <div className="over flex">
             {" "}
             <img src={profile} alt="" />{" "}
             <p className="text-white my-auto  mx-auto text-xl">Profile</p>
@@ -78,7 +54,7 @@ const SideBar = () => {
             <img src={settings} alt="" />{" "}
             <p className="text-white my-auto  mx-auto text-xl">Settings</p>
           </div>
-         
+          */}
       </div>
     </div>
   );
