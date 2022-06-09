@@ -295,14 +295,23 @@ border-radius: 10px;
 padding: 10px;
 padding: 10px;
 transition: ease-in 0.2s;
-/* color: black; */
 }
 
-/* .overlink a :active{
-  transform: scale(1.3,1.3);
-  background-color: #b3c10f;
-  border-radius: 10px;
-  /* padding: 10px; */
-  /* padding-left: -20px; */
- 
+.theinput{
+  border: 1px black solid;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+} 
 
+.swipper{
+ width: 100% !important;  
+}
+
+.addIt{
+  height: 10%;
+}
+
+.swipper >img{
+object-fit: cover;
+}

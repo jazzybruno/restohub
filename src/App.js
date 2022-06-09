@@ -57,7 +57,7 @@ const App = () => {
           element={isLoggedIn ?  <Profile /> :  <Navigate to="/login" />}
         ></Route>
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 };
