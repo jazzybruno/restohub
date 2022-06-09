@@ -34,7 +34,7 @@ import {
     },
   };
   
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July' , 'August' , 'September' , 'October' , 'November' , 'December'];
   
   export const data = {
     labels,
@@ -42,15 +42,15 @@ import {
 
       {
         label: 'Orders',
-        data: [40,20,120,40,60,30,70],
-        backgroundColor: '#66ff66',
+        data: [40,20,120,40,60,30,70 , 65 , 67 , 89 , 90 , 18],
+        backgroundColor: '#b3c10f',
       },
 
 
       {
         label: 'Clients',
-        data: [60,40,100,20,80,30,70],
-        backgroundColor: '#00ff99',
+        data: [26,46,100,40,30,30,70 , 65 , 67 , 89 , 90 , 18],
+        backgroundColor: '#b3c10f',
 
       },
     ],
@@ -59,7 +59,7 @@ import {
     return( 
       <div>
 
-        <Bar options={options} height={`230%`} data={data}  />
+        <Bar options={options} height={`180%`} data={data}  />
       </div>
     );
   }
