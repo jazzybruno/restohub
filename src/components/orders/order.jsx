@@ -31,7 +31,7 @@ const Order = () => {
       <SideBar />
       <div className="othercontent">
         <NavBar />
-        <div className="ordersList p-2 w-[94.7%]  bg-white mt-10 ml-20 flex">
+        <div className="ordersList p-2 w-[94.7%]  bg-white mt-[5rem] ml-10 flex rounded-xl">
           <div>
             <div className="min flex">
               <p className="ml-10 pt-5 font-bold text-3xl">Orders</p>
@@ -66,9 +66,9 @@ const Order = () => {
             <p className="numbersOrder ml-10">1</p>
             <div className="separeting"></div>
             <p className="description ml-8">All</p>
-            <p className="numbersOrder ml-10">30</p>
+            <p className="numbersOrder ml-10">{Data.length}</p>
 
-            <div className="addOrder">
+            <div className="addOrder text-lg  ">
               <p className="addIt font-bold text-xl ml-10 pt-10">Add Order</p>
               <p className="manually text-xl ml-10 mt-5  ">manually</p>
               <div className="flex">
@@ -87,7 +87,7 @@ const Order = () => {
                     <label className="ml-10 text-[140%]" htmlFor="">
                       Dessert
                     </label>
-                    <button className="orderButton  ml-36">New</button>
+                    <button className="orderButton  ml-36 rounded-md">New</button>
                   </div>
 
                   <div className="flex mt-5 ml-5">
@@ -95,7 +95,7 @@ const Order = () => {
                     <label className="ml-10 text-[140%]" htmlFor="">
                       Dessert
                     </label>
-                    <button className="orderButton  ml-36">New</button>
+                    <button className="orderButton  ml-36 rounded-md">New</button>
                   </div>
 
                   <div className="flex mt-5 ml-5">
@@ -109,7 +109,7 @@ const Order = () => {
                     <label className="ml-10 text-[140%]" htmlFor="">
                       Dessert
                     </label>
-                    <button className="orderButtonD  ml-36">Default</button>
+                    <button className="orderButtonD  ml-36 rounded-md">Default</button>
                   </div>
 
                   <div className="flex mt-5 ml-5">
@@ -117,7 +117,7 @@ const Order = () => {
                     <label className="ml-10 text-[140%]" htmlFor="">
                       Dessert
                     </label>
-                    <button className="orderButton  ml-36">New</button>
+                    <button className="orderButton  ml-36 rounded-md">New</button>
                   </div>
 
                   <div className="flex mt-5 ml-5">
@@ -125,7 +125,7 @@ const Order = () => {
                     <label className="ml-10 text-[140%]" htmlFor="">
                       Dessert
                     </label>
-                    <button className="orderButton mb-5 ml-36">New</button>
+                    <button className="orderButton mb-5 ml-36 rounded-md">New</button>
                   </div>
                 </form>
               </div>

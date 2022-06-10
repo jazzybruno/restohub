@@ -42,7 +42,7 @@ const [password, setPassword] = useState("");
     localStorage.setItem("accessToken", response.data.token.accessToken);
     localStorage.setItem("refreshToken", response.data.token.refreshToken);
 
-    props.truthhandler(true);
+    // props.handler(true);
 
     swal({
       title: "Great!!",
@@ -57,7 +57,7 @@ const [password, setPassword] = useState("");
     const message = error.response.data.apierror.message
     JSON.stringify(message)
   
-    props.falsehandler(false);
+    // props.handler(false);
 
     swal({
       title: "Error",

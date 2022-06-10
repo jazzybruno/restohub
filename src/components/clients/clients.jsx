@@ -12,7 +12,7 @@ const Clients = () => {
       <Sidebar />
       <div className="otherClients">
         <NavBar />
-        <div className="newClient mt-20 ml-40">
+        <div className="newClient mt-20 ml-80">
           <div>
             {" "}
             {/* <p className="text-3xl font-light ">Overview</p>{" "} */}
@@ -28,9 +28,9 @@ const Clients = () => {
             </form>{" "}
           </div>
         </div>
-        <div className="allclients bg-white  w-[90%] ml-[10%] mt-10 rounded-xl">
+        <div className="allclients bg-white  w-[90%] ml-[5%] mt-10 rounded-xl">
             <p className="ml-20 pt-10 text-[150%] ">Clients</p>
-            <div className="header flex font-light text-xl ml-[6%] mt-7">
+            <div className="header flex font-light text-xl ml-[4%] mt-7">
                 <p>Client Details</p>
                 <p className="ml-[25%]">Sales</p>
                 <p className="ml-[22%]">Detailed Report</p>
