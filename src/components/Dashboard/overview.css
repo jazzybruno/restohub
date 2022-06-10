@@ -315,3 +315,11 @@ transition: ease-in 0.2s;
 .swipper >img{
 object-fit: cover;
 }
+
+.logo{
+  margin-left: 10px;
+}
+
+.downWard{
+  margin-top: 200%;
+}

@@ -55,7 +55,7 @@ import {
       },
     ],
   }
- function Chart() {
+ function Chart() { 
     return( 
       <div>
 
