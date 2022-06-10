@@ -46,10 +46,9 @@ function sortAll() {
       <Sidebar />
       <div className="mainmenu">
         <NavBar />
-        <div className="menus bg-white mt-20 ml-[10%]  rouded-xl ">
+        <div className="menus bg-white mt-20 ml-[5%]  rouded-xl ">
          <div className="upperpart flex" >
           <div>
-            {type}
           <p className="font-bold text-xl ml-10 pt-10">Menus</p>
          <p  className="font-light text-xl ml-10 mt-4">As of 25 May 2021</p>
           </div>  

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './restaurant.css'
-import NavBar from '../Dashboard/navbar';
+import NavProf from '../Dashboard/navprof';
 import Info from './info';
 import RestType from './restype';
 import RestMenu from './ownmenu';
@@ -10,7 +10,7 @@ const Profile = ()=>{
 
     return(
         <div className='mainProfile h-[100%]'>
-            <NavBar />
+            <NavProf />
             <div className="profilerun flex ">
                 <div className="elementProfile">
                    <p className='font-bold pt-8 text-center text-2xl'>Create Your Restaurant Profile</p>
