@@ -14,12 +14,22 @@ import Profile from "./components/profile/restaurant";
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
 
+  const authorize=()=>{
+    const token = localStorage.getItem('accessToken');
+    console.log(token);
+    if(token){
+        setIsLoggedIn(true)
+    }else{
+      setIsLoggedIn(false)
+    }
 
-useEffect(() => {
+  }
 
-  
+  useEffect(()=>{
+    authorize();
+  },[])
 
-});
+ 
   return (
     <BrowserRouter>
       <Routes>
