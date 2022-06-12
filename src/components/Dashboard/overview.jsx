@@ -20,12 +20,13 @@ import 'swiper/css/navigation'
 import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Overview = () => {
+  const navigate = useNavigate()
 
   const setSlider = () => {
-    <Navigate to='/profile' />
+   navigate('/login')
   }
 
   return (

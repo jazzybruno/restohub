@@ -3,7 +3,7 @@ import prof from "../images/bruno.jpg";
 // import search from "../images/search.png";
 import './overview.css'
 import {MdNotifications} from 'react-icons/md';
-
+import React from 'react';
 
 const NavBar =()=>{
   const name = "Jazzy Bruno";

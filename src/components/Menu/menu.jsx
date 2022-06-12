@@ -1,4 +1,4 @@
-import {React , useState} from 'react';
+import {React , useState } from 'react';
 import './menu.css'
 import NavBar from '../Dashboard/navbar';
 import Sidebar from '../Dashboard/sidebar';
@@ -7,9 +7,34 @@ import data from './data';
 import plus from '../images/plus.png'
 import Error from '../UI/error';
 import img from '../images/empty.gif'
+import axios from 'axios';
+import { useEffect } from 'react';
 
 
 const Menu = ()=>{
+
+  const api = axios.create({
+    baseURL: `https://backend.supamenu.rw`
+  })
+
+
+  useEffect( ()=>{
+    api.get('/supapp/api/menu-items',{
+      headers:{
+        'accessToken': `Bearer ${localStorage.getItem('token')}`,
+        'Auhorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+    .then(function(response){
+      console.log(response.data.content);
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+    
+
+  } , [])
+
 const [menu , setMenu] = useState(data)
 const [type , setType] = useState("");
 
