@@ -3,13 +3,50 @@ import "./order.css";
 import SideBar from "../Dashboard/sidebar";
 import NavBar from "../Dashboard/navbar";
 import Odd from "../UI/order";
-import Data from "./data";
+import data from "./data";
 import add from "../images/add.png";
 import img from '../images/empty.gif'
 import Error from "../UI/error";
+import { useEffect } from "react";
+import axios from 'axios';
+import swal from 'sweetalert'
+
 
 const Order = () => {
+  const [Data , setData] = useState(data)
   const [order, setOrder] = useState(Data);
+
+  const api = axios.create({
+    baseURL: `https://backend.supamenu.rw`
+  })
+
+  useEffect(()=>{
+    api.get('/supapp/api/orders',{
+      headers:{
+        // 'Access-Control-Allow-Origin': 'http://localhost:3000',
+        "Content-Type": "application/json",
+        'accessToken': `Bearer ${localStorage.getItem('token')}`,
+        'Auhorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    })
+    .then(function(response){
+      console.log(response.data);
+      setData(response.data)
+      swal({
+        title: "Error!!",
+        text: "Fetched the data successfully",
+        icon: "error",
+      })
+    })
+    .catch(function(error){
+      console.log(error);
+      swal({
+        title: "Error!!",
+        text: error.message,
+        icon: "error",
+      })
+    })
+  }, [])
 
   const newHandler = () => {
     setOrder(Data.filter((v) => v.status === "new"));

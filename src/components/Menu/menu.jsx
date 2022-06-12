@@ -3,15 +3,17 @@ import './menu.css'
 import NavBar from '../Dashboard/navbar';
 import Sidebar from '../Dashboard/sidebar';
 import MenuList from '../UI/menu';
-import data from './data';
+import datas from './data';
 import plus from '../images/plus.png'
 import Error from '../UI/error';
 import img from '../images/empty.gif'
 import axios from 'axios';
 import { useEffect } from 'react';
-
+import swal from 'sweetalert'
 
 const Menu = ()=>{
+  
+  const [data , setData] = useState(datas)
 
   const api = axios.create({
     baseURL: `https://backend.supamenu.rw`
@@ -26,10 +28,18 @@ const Menu = ()=>{
       }
     })
     .then(function(response){
-      console.log(response.data.content);
+      let array = response.data.content;
+      console.log(response.data)
+      setData(array)
+      
     })
     .catch(function(error){
       console.log(error);
+      swal({
+        title: "Error!!",
+        text: error.message,
+        icon: "error",
+      })
     })
     
 
@@ -87,7 +97,7 @@ function sortAll() {
          </div>
         <div className="flex">
         <div className="menul ist ml-48 mt-10" >
-         {menu.length === 0 ? <Error img={img} title="Empty" message="There are no menus available of this type" /> : menu.map(v=> <MenuList key={v.id} img={v.img} title={v.title} desc={v.desc} money={v.money} />)}
+         {data.length === 0 ? <Error img={img} title="Empty" message="There are no menus available of this type" /> : data.map(v=> <MenuList key={v.id} img={v.defaultPicturePath} title={v.name} desc={v.description} money={v.unitPrice  } />)}
           </div>
 
           <div className="newMenu h-96 w-[25%] mb-10 ml-6 mt-20 float-left">
