@@ -203,6 +203,7 @@ background-color: #b3c10f;
     .numberProfile{
         width: 50%;
         height: 40%;
+        /* padding: 0; */
     }
     .descProfile{
        width: 100%;
