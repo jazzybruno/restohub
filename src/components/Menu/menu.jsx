@@ -24,7 +24,7 @@ const Menu = ()=>{
     api.get('/supapp/api/menu-items',{
       headers:{
         'accessToken': `Bearer ${localStorage.getItem('token')}`,
-        'Auhorization': `Bearer ${localStorage.getItem('token')}`
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       }
     })
     .then(function(response){
