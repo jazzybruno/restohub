@@ -26,7 +26,7 @@ const Profile = ()=>{
                    </div>
 
                    <div
-                   onClick={()=> setStep(2)} style={{backgroundColor:step===2 ? "#b3c10f": "white" ,width:"100%", height:"10vh", alignItems:"center", paddingLeft:"7px", marginLeft:"0px"}}
+                   onClick={()=> setStep(2)} style={{backgroundColor:step===2 ? "#b3c10f": "white" ,width:"100%", height:"10vh", alignItems:"center", paddingLeft:"7px", marginLeft:"0px", borderRadius:"5px"}}
                     className="options flex ml-10 mt-5 cursor-pointer ">
                        <div className="numberProfile mr-10" id='ste2'style={{backgroundColor:step===2 ? "white": "#b3c10f" }} ><p className='text-center' >2</p></div>
                        <div className="descProfile">
@@ -36,7 +36,7 @@ const Profile = ()=>{
                    </div>
 
                    <div 
-                   onClick={()=> setStep(3)} style={{backgroundColor:step===3 ? "#b3c10f": "white" ,width:"100%", height:"10vh", alignItems:"center", paddingLeft:"7px", marginLeft:"0px"}}
+                   onClick={()=> setStep(3)} style={{backgroundColor:step===3 ? "#b3c10f": "white" ,width:"100%", height:"13vh", alignItems:"center", paddingLeft:"7px", marginLeft:"0px"}}
                    className="options flex ml-10 mt-5 cursor-pointer">
                        <div className="numberProfile mr-10" style={{backgroundColor:step===3 ? "white": "#b3c10f" }}> <p className='text-center' >3</p> </div>
                        <div className="descProfile">
