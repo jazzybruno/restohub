@@ -48,6 +48,13 @@ color: #000000;
     margin-bottom: 20px;
   }
 
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+  *{
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+ 
   .separeting{
     background-color: #b3c10f;
     height: 1px;
