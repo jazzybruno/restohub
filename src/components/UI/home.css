@@ -1,3 +1,11 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+*{
+  font-family: 'Quicksand', sans-serif;
+}
+
+
 .landing {
   width: 297px;
   height: 249px;
