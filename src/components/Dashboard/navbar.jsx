@@ -5,8 +5,16 @@ import './overview.css'
 import {MdNotifications} from 'react-icons/md';
 import {React , useEffect} from 'react';
 import axios from 'axios';
+import {FiLogOut} from 'react-icons/fi';
 
 const NavBar =()=>{
+
+  const logoutHandler = () => {
+  localStorage.removeItem('accessToken');
+  localStorage.removeItem('refreshToken');
+  localStorage.removeItem('user');
+  window.location.href = '/login';
+  }
 
   const api = axios.create({
     baseURL: `https://backend.supamenu.rw`
@@ -31,6 +39,7 @@ const NavBar =()=>{
   <div className="info flex ml-auto mr-10 mt-2">
     <p className="text-xl mt-3 mr-10">{user}</p>
     <img className="profilepic " src={prof} alt="note" />
+    <FiLogOut className="logout text-3xl mt-3 ml-10 cursor-pointer" onClick={logoutHandler} />
   </div>
 </div>
   );

@@ -35,6 +35,7 @@ const Order = () => {
     })
     .then(function(response){
       setData(response.data.content)
+      console.log(response.data.content);
       
     })
     .catch(function(error){
@@ -47,8 +48,6 @@ const Order = () => {
     })
   }, [])
 
-
-   
 
   const newHandler = () => {
     setOrder(Data.filter((v) => v.status === "ORDERING"));
@@ -91,7 +90,7 @@ const Order = () => {
                   key={v.id}
                   img={v.img}
                   number={v.numberOfProducts}
-                  title={v.orderDetails.map(v=>v.item.name , )}
+                  title={v.orderDetails.map(v=>v.item.name)}
                   desc={v.customer.firstName}
                   times={v.numberOfProducts}
                 />

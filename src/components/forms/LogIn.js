@@ -1,14 +1,14 @@
-import { React  , useState}from "react";
+import { React  , useEffect, useState}from "react";
 import "./logIn.css";
 import axios from 'axios';
 import swal from 'sweetalert';
-import { useNavigate } from "react-router-dom";
+import { useNavigate , Navigate } from "react-router-dom";
 import { AiFillPropertySafety } from "react-icons/ai";
 
 
 function LogIn(props) {
   const navigate = useNavigate()
-
+  const [token , setToken] = useState('')
   const api = axios.create({
     baseURL: `https://backend.supamenu.rw`
   })
@@ -44,14 +44,21 @@ const [password, setPassword] = useState("");
     localStorage.setItem("user", response.data.firstName);
 
     // props.handler(true);
+    setToken(response.data.token.accessToken)
+      
 
     swal({
       title: "Great!!",
       text: "authanticated successfully",
       icon: "success",
     }).then(() => {
+        // <Navigate to="/overview"/>
         navigate("/overview")
     });
+
+    setTimeout(()=>{
+      window.location.reload()
+    } , 1000)
 
   })
   .catch(function (error){
@@ -68,6 +75,17 @@ const [password, setPassword] = useState("");
     });
   })
 }
+
+
+// if(token!==""){
+//   navigate('/overview')
+// }
+
+  setTimeout(()=>{
+    if(localStorage.getItem("accessToken")){
+      navigate("/overview")
+    }
+  } , 1000)
 
 
   

@@ -17,7 +17,6 @@ const App = () => {
 
   const authorize=()=>{
     const token = localStorage.getItem('accessToken');
-    console.log(token);
     if(token){
         setIsLoggedIn(true)
     }else{
