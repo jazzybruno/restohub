@@ -135,7 +135,7 @@ background-color: #b3c10f;
 
 .ownMenu{
     background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     height: 72vh;
     width: 55vw;
@@ -149,7 +149,7 @@ background-color: #b3c10f;
 
 .buttonsMenus button{
     border: 1px solid #b3c10f;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
     margin-top: 12px;
     width: 20%;
     height: 8vh;
@@ -192,7 +192,7 @@ background-color: #b3c10f;
     margin-top: 3%;
     width: 31vw;
     background-color: white;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     }
     .options{
