@@ -35,7 +35,7 @@ const Overview = () => {
       <div className="otherbar">
         <NavBar />
 
-        <div className="chart  mt-10 ">
+        <div className="chart  mt-10  ">
            <h1>Charts of Menu and Orders with reference to time:</h1>
           <div className="chartreal w-[85%]">
             <Chart />

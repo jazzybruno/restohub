@@ -10,6 +10,7 @@ import Menu from "./components/Menu/menu";
 import Order from "./components/orders/order";
 import Profile from "./components/profile/restaurant";
 // import Footer from "./components/UI/footer";
+import "./App.css";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
