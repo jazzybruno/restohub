@@ -4,6 +4,7 @@ import Image from "../images/logo.png";
 import axios from "axios";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
+import jwtDecode from "jwt-decode";
 
 const AddClient = (props) => {
   const api = axios.create({
@@ -22,6 +23,13 @@ const AddClient = (props) => {
   const [account, setAccount] = useState("");
 
   const dataHandler = (event) => {
+
+    const token = localStorage.getItem("accessToken");
+    const userData = jwtDecode(token);
+  
+    const mobile = userData.user.mobile;
+
+
     event.preventDefault();
     const data = {
       name: name,
@@ -41,7 +49,7 @@ const AddClient = (props) => {
         {
        
           address: address,
-          category: 1,
+          category: category,
           closingHour: "4:00",
           completeName: name,
           email: email,
@@ -50,7 +58,7 @@ const AddClient = (props) => {
           "customerBookTable": true,
           ownerEmail: "string",
           ownerNames: representative,
-          ownerPhoneNumber: "string",
+          ownerPhoneNumber: mobile,
           phone: phone,
           "status": "PENDING"
         },

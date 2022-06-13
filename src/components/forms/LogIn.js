@@ -41,6 +41,7 @@ const [password, setPassword] = useState("");
     
     localStorage.setItem("accessToken", response.data.token.accessToken);
     localStorage.setItem("refreshToken", response.data.token.refreshToken);
+    localStorage.setItem("user", response.data.firstName);
 
     // props.handler(true);
 
