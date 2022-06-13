@@ -1,6 +1,7 @@
 import React from 'react'
 import './types.css'
 
+
 const Types = (props) =>{
     
     return(

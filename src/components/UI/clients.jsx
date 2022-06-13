@@ -1,8 +1,14 @@
 import React from "react";
 import "./clients.css";
+import eye from "../images/Eye.png";
+
+
 
 
 const Client = (props) => {
+  let money=  "50 000 frw"
+ let  date =  "on 18.05.2022"
+
   return (
     <div className="client">
       <div className="first">
@@ -10,11 +16,11 @@ const Client = (props) => {
         <div>{props.updated}</div>
       </div>
       <div className="second">
-        <div>{props.money}</div>
-        <div>{props.date}</div>
+        <div>{money}</div>
+        <div>{date}</div>
       </div>
       <div className="look">
-        <img src={props.img} alt="client" />
+        <img src={eye} alt="client" />
       </div>
       <div className="type">
         <button className="button">{props.type}</button>

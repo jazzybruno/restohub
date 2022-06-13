@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState , useEffect } from "react";
 import "./order.css";
 import SideBar from "../Dashboard/sidebar";
 import NavBar from "../Dashboard/navbar";
@@ -7,7 +7,6 @@ import data from "./data";
 import add from "../images/add.png";
 import img from '../images/empty.gif'
 import Error from "../UI/error";
-import { useEffect } from "react";
 import axios from 'axios';
 import swal from 'sweetalert'
 
@@ -23,10 +22,9 @@ const Order = () => {
   useEffect(()=>{
     api.get('/supapp/api/orders',{
       headers:{
-        // 'Access-Control-Allow-Origin': 'http://localhost:3000',
         "Content-Type": "application/json",
-        'accessToken': `Bearer ${localStorage.getItem('token')}`,
-        'Auhorization': `Bearer ${localStorage.getItem('token')}`
+        'accessToken': `Bearer ${localStorage.getItem('accessToken')}`,
+        'Auhorization': `Bearer ${localStorage.getItem('accessToken')}`
       }
     })
     .then(function(response){
