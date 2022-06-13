@@ -1,12 +1,76 @@
-import React from "react";
+import {React , useEffect , useState} from "react";
 import "./clients.css";
 import Sidebar from "../Dashboard/sidebar";
 import NavBar from "../Dashboard/navbar";
 import plus from '../images/plus.png'
 import Data from './data'
 import Client from "../UI/clients";
+import axios from 'axios';
+import swal from 'sweetalert'
 
 const Clients = () => {
+
+  const api = axios.create({
+    baseURL: `https://backend.supamenu.rw`
+  })
+
+  const [data , setData] = useState([]) 
+  const [category , setCategory] = useState([])
+
+  useEffect( ()=>{
+    api.get('/supapp/api/service-providers',{
+      headers:{
+        'accessToken': `Bearer ${localStorage.getItem('accessToken')}`,
+        'Auhorization': `Bearer ${localStorage.getItem('accessToken')}`
+      }
+    })
+    .then(function(response){
+      let array = response.data.content;
+      console.log(response.data)
+      setData(array)
+     
+      
+    })
+    .catch(function(error){
+      console.log(error);
+      swal({
+        title: "Error!!",
+        text: error.message,
+        icon: "error",
+      })
+    })
+    
+
+  } , [])
+
+
+  useEffect( ()=>{
+    api.get('/supapp/api/service-provider-categories',{
+      headers:{
+        'accessToken': `Bearer ${localStorage.getItem('accessToken')}`,
+        'Auhorization': `Bearer ${localStorage.getItem('accessToken')}`
+      }
+    })
+    .then(function(response){
+      let array = response.data.content;
+      console.log(response.data)
+      setCategory(array[0])
+     
+      
+    })
+    .catch(function(error){
+      console.log(error);
+      swal({
+        title: "Error!!",
+        text: error.message,
+        icon: "error",
+      })
+    })
+    
+
+  } , [])
+
+
   return (
     <div className="overview">
       <Sidebar />
@@ -28,7 +92,7 @@ const Clients = () => {
             </form>{" "}
           </div>
         </div>
-        <div className="allclients bg-white  w-[90%] ml-[5%] mt-10 rounded-xl">
+        <div className="allclients bg-white   w-[90%] ml-[5%] mt-10 rounded-xl">
             <p className="ml-20 pt-10 text-[150%] ">Clients</p>
             <div className="header flex font-light text-xl ml-[4%] mt-7">
                 <p>Client Details</p>
@@ -36,7 +100,9 @@ const Clients = () => {
                 <p className="ml-[22%]">Detailed Report</p>
                 <p className="ml-[15%]">Category</p>
             </div>
-            {Data.map(v=> <Client name={v.name} updated={v.updated}  money={v.money} date={v.date} img={v.img} type={v.type} />)}
+           <div className="listClients mb-10">
+           {data.map(v=> <Client name={v.name} updated={v.updatedAt} date={v.date}  type={v.serviceCategory.name} />)}
+           </div>
         </div>
       </div>
     </div>

@@ -8,11 +8,13 @@
   margin-left: 2vw;
  margin-right: 2vw;
   display: flex;
-  gap: 50px;
+  gap: 60px;
+  margin-bottom: 1vw;
 }
 .first {
   margin-top: 3%;
   margin-left: 4%;
+  width: 11%;
 }
 
 .first :nth-child(1) {
@@ -26,9 +28,9 @@
   letter-spacing: 0.1em;
 }
 
-.first :nth-child(2) {
+.first :nth-choild(2) {
   font-family: "Inter";
-  font-style: normal;
+  font-style: nrmal;
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
@@ -37,7 +39,7 @@
 
 .second {
   margin-top: 4%;
-  margin-left: 13%;
+  margin-left: 13rem;
 }
 
 .second :nth-child(1) {
