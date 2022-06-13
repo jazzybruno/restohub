@@ -3,10 +3,18 @@ import prof from "../images/bruno.jpg";
 // import search from "../images/search.png";
 import './overview.css'
 import {MdNotifications} from 'react-icons/md';
-import React from 'react';
+import {React , useEffect} from 'react';
+import axios from 'axios';
 
 const NavBar =()=>{
-  const name = "Jazzy Bruno";
+
+  const api = axios.create({
+    baseURL: `https://backend.supamenu.rw`
+  })
+
+
+  const user = localStorage.getItem('user')
+
   return(
 <div className="navbar flex">
   
@@ -21,7 +29,7 @@ const NavBar =()=>{
    {/* <img className=" h-10 mr-10 ml-7 " src={notification} alt="note" /> */}
    </div>
   <div className="info flex ml-auto mr-10 mt-2">
-    <p className="text-xl mt-3 mr-10">{name}</p>
+    <p className="text-xl mt-3 mr-10">{user}</p>
     <img className="profilepic " src={prof} alt="note" />
   </div>
 </div>
