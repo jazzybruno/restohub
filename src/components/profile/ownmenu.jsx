@@ -20,7 +20,7 @@ const RestMenu = () => {
       <input className="longForms" type="text" placeholder="ingredients" />
       <label htmlFor="">Image</label>
       <input className="longForms" type="text" placeholder="upload image" />
-      <button className="gone" type="submit">Add more</button>
+      <button className="gone mb-10" type="submit">Add more</button>
       </form>
     </div>
   );

@@ -2,6 +2,7 @@ const Data_last1 =   [
    
 
 {
+    id: 1,
     sale:"sale",
     name:"Pub",
     details:"view details",
@@ -13,9 +14,9 @@ const Data_last1 =   [
 
 
 }, {
-    
+    id: 2,
     name:"Cafes",
-    sale:"sale",
+    sale:"sale12",
     details:"view details",
     amount: "390857600 RWF",
     type:"Aroma",

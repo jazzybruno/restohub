@@ -1,0 +1,29 @@
+
+.iconsx{
+display: flex;
+align-items: center;
+margin-bottom: 4.1rem;
+
+
+}
+.iconsx>img{
+  
+    width: 2rem;
+    height: 2rem;
+    margin-right: 1rem;   
+}
+
+.see-me{
+ position: fixed;
+ height: 100vh;
+ top: 0rem; 
+ padding: 1rem; 
+ background-color: black;
+ color: white; 
+}
+.see-me>img{
+    width: 12rem;
+    height: 5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}

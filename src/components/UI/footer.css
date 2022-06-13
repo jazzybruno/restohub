@@ -1,63 +1,74 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 *{
     margin:0;
     padding: 0;
 }
 
 .footer{
+    
     background-color: #05021F;
     height: 40vh;
     color: #fff;
     overflow: hidden;
+    align-items: center;
+    /* margin: 30px; */
+    position: relative;
+    /* top:80px; */
 }
-.logo{
+.logo12{
     width: 130px;
     position: relative;
-    top:100px;
-    right: 850px;
+    top:120px;
+    right: 800px;
   
 }
-.column1 p{
+.column12 p{
     position:relative;
-    top:90px;
-    right:814px;
+    top:110px;
+    right:800px;
     color:#FFFFFF
 }
-.instagram{
-    font-size:23px;
+.instagram12{
+    font-size:40px;
     position:relative;
     top:120px;
-    right:830px;
-    border: 1px solid #656372;
+    right:800px;
+    /* border: 1px solid #656372; */
     border-radius:5px;
-    /* height:40px; */
     padding: 10px;
-    background-color: #E7E4FF;
-    color:black;
+    /* background-color: #E7E4FF; */
+    color:white;
 }
 .facebook{
-    font-size:23px;
+    font-size:50px;
     position:relative;
-    top:120px;
-    right:820px;
-    border: 1px solid #656372;
+    top:98px;
+    right:760px;
+    /* border: 1px solid #656372; */
     border-radius:5px;
     /* height:40px; */
-    padding: 10px;
-    background-color: #E7E4FF;
-    color:black;
+    padding: 12px;
+    /* background-color: #E7E4FF; */
+    color:white;
+
 
 }
 .youtube{
-    font-size:23px;
+    font-size:50px;
     position:relative;
-    top:120px;
-    right:807px;
-    border: 1px solid #656372;
+    top:76px;
+    right:720px;
+    /* border: 1px solid #656372; */
     border-radius:5px;
     /* height:40px; */
     padding: 10px;
-    background-color: #E7E4FF;
-    color:black;
+    /* background-color: #E7E4FF; */
+    color:white;
 
 }
 a{
@@ -69,12 +80,17 @@ a{
 
 .contact{
     position:relative;
-    left:20px;
+    
 
+}
+.column2 h3{
+    position:relative;
+    left:30px;
+    color:#a4af25;
 }
 .about{
     position:relative;
-    left:15px;
+    
 }
 ul{
     position:relative;
@@ -82,10 +98,10 @@ ul{
     
 }
 
-.column1{
+.column12{
     /* margin-left: 150px; */
     position: relative;
-    left:150px;
+    left:950px;
     bottom:50px;
 }
 h3{
@@ -96,13 +112,22 @@ h3{
 .column2{
     position:relative;
     bottom:70px;
-    right:350px
+    /* right:30px */
+    left:540px;
 }
+
 
 .column3{
     position:relative;
     bottom:220px;
-    right:40px
+    left:859px;
+    
+}
+
+.column3 h3{
+    position:relative;
+    left:120px;
+    color:#a4af25;
 
 }
 .phone{
@@ -112,7 +137,7 @@ h3{
 }
 .email{
     position: relative;
-    left:92px;
+    left:72px;
     bottom:30px;
     /* top:10px; */
 }
@@ -124,23 +149,23 @@ h3{
 }
 .tel{
     position: relative;
-    right:10px;
+    left:25px;
     top:18px;
 }
 .mail{
     position: relative;
-    right:10px;
+    left:25px;
     font-size:20px;
     top: 5px;
 }
 .locate{
     position: relative;
-    right:10px;
+    left:25px;
 }
 .column4{
     position: relative;
     bottom:396px;
-    left:400px;
+    left:1350px;
 }
 .column4 p{
     position: relative;
@@ -180,4 +205,6 @@ hr{
     color:#B3C10F;
     position: relative;
     bottom:340px;
+    left:800px;
+    /* text-align:center */
 }

@@ -1,55 +1,64 @@
-import React from 'react'
-import {
-    Chart as ChartJS,
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend,
-  } from 'chart.js';
-  import { Bar } from 'react-chartjs-2';
-  // import faker from 'faker';
-  
-  ChartJS.register(
-    CategoryScale,
-    LinearScale,
-    BarElement,
-    Title,
-    Tooltip,
-    Legend
-  );
-//   const dataLinks = [1,2,3,4,5,6,7,8,8,9,0,10,11,22,33,44,]
-                                                                                                                                                                                                                                                                            
-  export const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top"
-      },
-      title: {
-        display: true,
-        text: 'Char name',
-      },
-    },
-  };
-  
-  const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
-  
-  export const data = {
-    labels,
-    datasets: [
 
-      {
-        label: 'Dataset 2',
-        data: [50,20,120,40,80,30,70],
-        backgroundColor: '#b3c10f',
-      },
-    ],
-  }
- function Chart() {
-    return( 
-      <Bar options={options} height={`230%`} data={data} />
-    );
-  }
-  export default Chart
+
+import React from 'react' 
+import { Line } from 'react-chartjs-2'
+import {} from 'chart.js/auto'
+
+const options = {
+    scales: {
+        y: {
+            ticks: {
+                color: 'black',
+                font: {
+                    size: 18,
+                }
+            },
+            grid: {
+                color: 'black'
+            }
+        },
+        x:{
+            ticks: {
+                color: 'black',
+                font: {
+                    size: 18
+                }
+            }
+        }
+    },
+}
+
+const data = (canvas) => {
+    const ctx = canvas.getContext('2d')
+    const redbackgroundGradient = ctx.createLinearGradient(0, 0, 0, 500);
+    
+    redbackgroundGradient.addColorStop(0, 'rgba(179, 193, 15, 0.76)');
+    redbackgroundGradient.addColorStop(0.5, 'rgba(179, 193, 15, 0.76)');
+
+    let chartdata = {
+        labels: ['jan', 'feb', 'march', 'april', 'may', 'jun', 'july', 'august'],
+        datasets: [
+            {
+                label: 'Clients Trend',
+                data: [10 , 15 , 20 , 15 , 30 , 35 , 40 , 45 , 50  ],
+                fill: true,
+                backgroundColor: redbackgroundGradient,
+                pointRadius: 5,
+                pointBorderWidth: 2,
+                tension: 0.4
+            }
+        ]
+    }
+
+    return (
+        <Line data={chartdata} options={options} width={1000} height={500}  ></Line>
+    )
+}
+
+export default function Chart() {
+    return(
+        <div>
+            {data(document.createElement('canvas'))}
+        </div>
+    )
+}

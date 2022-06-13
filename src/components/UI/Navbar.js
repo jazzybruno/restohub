@@ -20,7 +20,7 @@ function Nav() {
         <MdNotificationsActive 
         className="notification"
         />
-        <h1 className="text">Jazzy Bruno</h1>
+        <h1 className="text">Ascend Group</h1>
 
                 <FaRegUserCircle
                 className="user"

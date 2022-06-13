@@ -1,7 +1,7 @@
 
  const Data_last =   [
     {
-    
+        id: 1,
     name:"Restaurant",
     amount: "390857600 RWF",
     sale:"sale",
@@ -14,7 +14,7 @@
 
 },
 {
-   
+    id: 2,
     name:"Hotels",
     sale:"sale",
     amount: "390857600 RWF",

@@ -1,6 +1,7 @@
 import React from "react";
 import "./clients.css";
 
+
 const Client = (props) => {
   return (
     <div className="client">
@@ -16,8 +17,9 @@ const Client = (props) => {
         <img src={props.img} alt="client" />
       </div>
       <div className="type">
-        <button>{props.type}</button>
+        <button className="button">{props.type}</button>
       </div>
+
     </div>
   );
 };

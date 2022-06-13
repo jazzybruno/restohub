@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './restaurant.css'
-import NavBar from '../Dashboard/navbar';
+import NavProf from '../Dashboard/navprof';
 import Info from './info';
 import RestType from './restype';
 import RestMenu from './ownmenu';
@@ -11,7 +11,7 @@ const Profile = ()=>{
 
     return(
         <div className='mainProfile h-[100%]'>
-            <NavBar />
+            <NavProf />
             <div className="profilerun flex ">
                 <div className="elementProfile">
                    <p className='font-bold pt-8 text-center text-2xl'>Create Your Restaurant Profile</p>
@@ -21,7 +21,7 @@ const Profile = ()=>{
                        <div className="numberProfile mr-10" style={{backgroundColor:step===1 ? "white": "#b3c10f" }} ><p className='text-center' >1</p></div>
                        <div className="descProfile">
                            <p className='font-bold text-xl'>Restaurant information</p>
-                           <p className='text-lg'>restaurant name and address</p>
+                           <p className='text-lg'>Restaurant Name and Address</p>
                        </div>
                    </div>
 
@@ -31,7 +31,7 @@ const Profile = ()=>{
                        <div className="numberProfile mr-10" id='ste2'style={{backgroundColor:step===2 ? "white": "#b3c10f" }} ><p className='text-center' >2</p></div>
                        <div className="descProfile">
                            <p className='font-bold text-xl'>Restaurant Type and timing</p>
-                           <p className='text-lg'>establishment and cuisine type</p>
+                           <p className='text-lg'>Establishment and Cuisine type</p>
                        </div>
                    </div>
 

@@ -94,7 +94,7 @@ label{
   clear: left;
   height: 6vh;
   font-size: 19px;
-  margin-right: 12px; 
+  margin-left: 12px; 
   border-color  : #B3C10F;
   border-radius: 9px;
 }
@@ -111,11 +111,17 @@ label{
   border-radius: 9px; 
 }
 
+
+
+  /*styles for adding new client*/
+
+
 .image{
   position: absolute;
-  left: 15vw;
+  left: 17vw;
   top: 40vh;
-  height: 18vh;
+  height: 15vh;
+  width: 15vw;
 }
 .p-container {
   height: 100vh;
@@ -165,14 +171,11 @@ label{
   float: left;
   margin-left: 5rem;
   font-size : 24px;
-  /* box-shadow: 1px 5px 7px rgba(58, 57, 57, 0.5); */
 }
-/* button:hover{
+button:hover{
   cursor: pointer;
-  border: 1px solid #B3C10F;
-  background-color: #fff;
-  color: #B3C10F;
-} */
+}
+
 .grouped-inputs {
   display: flex;
 }
@@ -295,5 +298,89 @@ display: block;
   margin-left:200px;
   margin-top:10px;
 }
-  
+}
+
+/*responsiveness for addClient page*/
+
+@media (max-width:1200px) {
+
+  .p-form-container h1 {
+    font-size: 2.3em !important;
+    margin-bottom: 1em;
+  }
+
+  .image{
+    left: 10vw;
+    height: 12vh;
+    width: 25vw;
+  }
+
+  .p-form-container {
+    height: 90vh;
+    width: 48vw;
+    margin-right: 3rem;
+  }
+
+  .p-form-container  input {
+    width: 32.5vw;
+    font-size: 15px;
+  }
+
+  .p-form-container button {
+    width: 32.5vw;
+    margin-top: 2em;
+  }
+
+  .grouped-inputs input {
+    width: 15.2vw;
+  }
+}
+
+/*responsiveness for addClient page*/
+
+@media (max-width: 800px) {
+  .image{
+    display: none;
+  }
+
+  .p-form-container h1 {
+    font-size: 2.3em !important;
+    margin-bottom: 1em;
+  }
+
+  .p-form-container {
+    float: right;
+    width: 60vw;
+    margin-top: 4rem;
+    margin-right: 8rem;
+  }
+
+  .p-form-container  input {
+    width: 45vw;
+    font-size: 10px;
+    margin-left: -1rem;
+  }
+
+  .p-form-container button {
+    width: 45vw;
+    margin-top: 2em;
+    margin-left: 3.8rem;
+  }
+
+  .grouped-inputs input {
+    width: 22.3vw;
+  }
+}
+
+.swal-overlay {
+  background-color: rgba(30, 34, 33, 0.75);
+}
+
+.swal-modal{
+  height: 50vh;
+  width: 50vw;
+}
+
+.swal-button{
+  background-color: #B3C10F;
 }

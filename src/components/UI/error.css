@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.imgNothing{
+    height: 40%;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
