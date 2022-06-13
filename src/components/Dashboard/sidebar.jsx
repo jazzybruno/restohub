@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import logo from "../images/logo.png";
 import "./overview.css";
 
@@ -10,6 +10,7 @@ import { CgProfile } from "react-icons/cg";
 import { FiSettings } from "react-icons/fi";
 
 const SideBar = () => {
+  
   return (
     <div className="sidebar h-full">
       <div className="logo mx-10 ">
@@ -17,27 +18,29 @@ const SideBar = () => {
         <div></div>
 
         <div className="all ml-5">
-          <a className="overlink " href="/overview">
-            <span className="text-white  flex gap-3">
+          <a className="overlink " href="/overview" >
+            <span className="text-white  flex gap-3" 
+            
+            >
               {" "}
               <AiFillDashboard className="iconsSide" /> Overview
             </span>
           </a>
 
-          <a className="overlink" href="/clients">
-            <span className="text-white  flex gap-3">
+          <a className="overlink" href="/clients" >
+            <span className="text-white  flex gap-3" >
               <AiOutlineUsergroupAdd className="iconsSide" /> Clients
             </span>
           </a>
 
-          <a className="overlink" href="/menu">
-            <span className="text-white  flex gap-3">
+          <a className="overlink" href="/menu" >
+            <span className="text-white  flex gap-3" >
               <MdOutlineRestaurantMenu className="iconsSide" /> Menu
             </span>
           </a>
 
-          <a className="overlink" href="/orders">
-            <span className="text-white  flex gap-3">
+          <a className="overlink" href="/orders" >
+            <span className="text-white  flex gap-3" >
               <GiDeliveryDrone className="iconsSide" /> Orders
             </span>
           </a>

@@ -15,6 +15,7 @@ import swal from 'sweetalert'
 const Order = () => {
   const [Data , setData] = useState(data)
   const [order, setOrder] = useState(Data);
+  const [style, setStyle] = useState(1)
 
   const api = axios.create({
     baseURL: `https://backend.supamenu.rw`
@@ -73,10 +74,10 @@ const Order = () => {
             <div className="min flex">
               <p className="ml-10 pt-5 font-bold text-3xl">Orders</p>
               <div className="buttonOrder">
-                <button onClick={newHandler}>New</button>
-                <button onClick={deliveredHandler}>Delivered</button>
-                <button onClick={rejectedHandler}>Rejected</button>
-                <button onClick={allHandler}>All</button>
+                <button onClick={()=>{ newHandler(); setStyle(1);}} style={{backgroundColor:style===1 ? "#b3c10f":"transparent"}}>New</button>
+                <button onClick={()=>{deliveredHandler();setStyle(2);}} style={{backgroundColor:style===2 ? "#b3c10f":"transparent"}}>Delivered</button>
+                <button onClick={()=>{rejectedHandler();setStyle(3);}}  style={{backgroundColor:style===3 ? "#b3c10f":"transparent"}}>Rejected</button>
+                <button onClick={()=>{allHandler();setStyle(4);}}  style={{backgroundColor:style===4 ? "#b3c10f":"transparent"}}>All</button>
               </div>
             </div>
             <div className="listOrder ml-44 ">
