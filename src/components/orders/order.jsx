@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState , useEffect } from "react";
 import "./order.css";
 import SideBar from "../Dashboard/sidebar";
 import NavBar from "../Dashboard/navbar";
@@ -7,15 +7,19 @@ import data from "./data";
 import add from "../images/add.png";
 import img from '../images/empty.gif'
 import Error from "../UI/error";
-import { useEffect } from "react";
 import axios from 'axios';
 import swal from 'sweetalert'
 
 
 const Order = () => {
-  const [Data , setData] = useState(data)
+  const [Data , setData] = useState([])
   const [order, setOrder] = useState(Data);
   const [style, setStyle] = useState(1)
+  const [orders , setOrders] = useState([]);
+  const [newer  , setNewer] = useState(0)
+  const [placed  , setPaced] = useState(0)
+  const [rejected  , setRejected] = useState(0)
+  const [all  , setAll] = useState(0)
 
   const api = axios.create({
     baseURL: `https://backend.supamenu.rw`
@@ -24,20 +28,14 @@ const Order = () => {
   useEffect(()=>{
     api.get('/supapp/api/orders',{
       headers:{
-        // 'Access-Control-Allow-Origin': 'http://localhost:3000',
         "Content-Type": "application/json",
-        'accessToken': `Bearer ${localStorage.getItem('token')}`,
-        'Auhorization': `Bearer ${localStorage.getItem('token')}`
+        'accessToken': `Bearer ${localStorage.getItem('accessToken')}`,
+        'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
       }
     })
     .then(function(response){
-      console.log(response.data);
-      setData(response.data)
-      swal({
-        title: "Error!!",
-        text: "Fetched the data successfully",
-        icon: "error",
-      })
+      setData(response.data.content)
+      
     })
     .catch(function(error){
       console.log(error);
@@ -49,20 +47,27 @@ const Order = () => {
     })
   }, [])
 
+
+   
+
   const newHandler = () => {
-    setOrder(Data.filter((v) => v.status === "new"));
-  };
+    setOrder(Data.filter((v) => v.status === "ORDERING"));
+    setNewer(Data.filter((v) => v.status === "ORDERING").length);
+  };  
 
   const deliveredHandler = () => {
-    setOrder(Data.filter((v) => v.status === "delivered"));
+    setOrder(Data.filter((v) => v.status === "PLACED"));
+    setPaced(Data.filter((v) => v.status === "PLACED").length);
   };
 
   const rejectedHandler = () => {
-    setOrder(Data.filter((v) => v.status === "rejected"));
+    setOrder(Data.filter((v) => v.status === "CANCELLED"));
+    setRejected(Data.filter((v) => v.status === "CANCELLED").length);
   };
 
   const allHandler = () => {
     setOrder(Data);
+    setAll(Data.length);
   };
   return (
     <div className="overview">
@@ -83,11 +88,12 @@ const Order = () => {
             <div className="listOrder ml-44 ">
               {order.length === 0 ? <Error img={img} title="Empty" message="There are no orders available of this type" /> : order.map((v) => (
                 <Odd
-                  key={v.number}
+                  key={v.id}
                   img={v.img}
-                  number={v.number}
-                  title={v.title}
-                  desc={v.desc}
+                  number={v.numberOfProducts}
+                  title={v.orderDetails.map(v=>v.item.name , )}
+                  desc={v.customer.firstName}
+                  times={v.numberOfProducts}
                 />
               ))}
             </div>
@@ -95,16 +101,16 @@ const Order = () => {
 
           <div className="sidethings ml-56  mt-20 ">
             <p className="description ">Delivered</p>
-            <p className="numbersOrder ml-10">6</p>
+            <p className="numbersOrder ml-10">{newer}</p>
             <div className="separeting"></div>
             <p className="description">Waiting</p>
-            <p className="numbersOrder ml-6">12</p>
+            <p className="numbersOrder ml-10">{placed}</p>
             <div className="separeting"></div>
             <p className="description">Rejected</p>
-            <p className="numbersOrder ml-10">1</p>
+            <p className="numbersOrder ml-10">{rejected}</p>
             <div className="separeting"></div>
             <p className="description ml-8">All</p>
-            <p className="numbersOrder ml-10">{Data.length}</p>
+            <p className="numbersOrder ml-10">{all}</p>
 
             <div className="addOrder text-lg  ">
               <p className="addIt font-bold text-xl ml-10 pt-10">Add Order</p>

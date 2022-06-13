@@ -8,9 +8,9 @@ const Odd = (props) => {
            <div > <img className="orderuimage" src={props.img} alt="orderlist" /> </div>
        
         <div className="container_2">
-        <div className="ordersde">{`Order |${props.number}`}</div>
-          <div>{props.title}</div>
-          <div className="desct">{props.desc}</div>
+        <div className="ordersde">{`Orders`}</div>
+          <div>{props.title} </div>
+          <div className="desct font-bold">{props.desc} * {props.times}</div>
         </div>
       </div>
    

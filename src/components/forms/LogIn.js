@@ -41,6 +41,7 @@ const [password, setPassword] = useState("");
     
     localStorage.setItem("accessToken", response.data.token.accessToken);
     localStorage.setItem("refreshToken", response.data.token.refreshToken);
+    localStorage.setItem("user", response.data.firstName);
 
     // props.handler(true);
 
@@ -101,6 +102,7 @@ const [password, setPassword] = useState("");
             required
             className="login1 px-5  py-[10px] mb-[5px] mt-2 text-xl  mx-10 border-2 md:w-[400px] sm:w-[30px] h-[50px] "
             name="fname"
+            type='password'
             placeholder="Enter your Password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}

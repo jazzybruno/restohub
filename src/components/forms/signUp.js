@@ -161,6 +161,7 @@ function SignUp() {
             className=" login3 px-5 h-14 py-[5px] mb-[2%]  mx-[15%] mt-[5px] border-2  w-[400px] "
             name="fname"
             placeholder="Enter your Password"
+            type='password'
           />
           <div className=" flex justify-center content-center  ">
             <input
