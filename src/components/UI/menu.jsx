@@ -1,11 +1,12 @@
 import React from "react";
 import "./menu.css";
+import menu from "../images/menupic.webp";
 
 const Menu = (props) => {
   return (
     <div className="menuui">
       <div>
-        <img src={props.img} alt="Menu picture   "/>
+        <img src={menu} alt="Menu picture   "/>
       </div>
       <div className="desc">
         <div>{props.title}</div>
