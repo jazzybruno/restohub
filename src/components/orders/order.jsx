@@ -93,6 +93,7 @@ const Order = () => {
                   title={v.orderDetails.map(v=>v.item.name)}
                   desc={v.customer.firstName}
                   times={v.numberOfProducts}
+                  amount={v.totalOrderPrice}
                 />
               ))}
             </div>
@@ -100,10 +101,10 @@ const Order = () => {
 
           <div className="sidethings ml-56  mt-20 ">
             <p className="description ">Delivered</p>
-            <p className="numbersOrder ml-10">{newer}</p>
+            <p className="numbersOrder ml-10">{placed}</p>
             <div className="separeting"></div>
             <p className="description">Waiting</p>
-            <p className="numbersOrder ml-10">{placed}</p>
+            <p className="numbersOrder ml-10">{newer}</p>
             <div className="separeting"></div>
             <p className="description">Rejected</p>
             <p className="numbersOrder ml-10">{rejected}</p>

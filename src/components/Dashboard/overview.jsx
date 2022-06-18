@@ -21,13 +21,72 @@ import 'swiper/css/effect-fade'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+import { useEffect } from "react";
+import { RiLockFill } from "react-icons/ri";
 
 const Overview = () => {
   const navigate = useNavigate()
+  const [orders , setOrders] = useState(0);
+  const [items , setItems] = useState(0);
+  const [clients , setClients] = useState(0);
 
   const setSlider = () => {
    navigate('/login')
   }
+
+  const api = axios.create({
+    baseURL: `https://backend.supamenu.rw`
+  })
+
+  useEffect(()=>{
+    api.get('/supapp/api/orders',{
+      headers:{
+        "Content-Type": "application/json",
+        'accessToken': `Bearer ${localStorage.getItem('accessToken')}`,
+        'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+      }
+    })
+    .then(function(response){
+      setOrders(response.data.content.length)
+      
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+
+    api.get('/supapp/api/menu-items',{
+      headers:{
+        "Content-Type": "application/json",
+        'accessToken': `Bearer ${localStorage.getItem('accessToken')}`,
+        'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+      }
+    })
+    .then(function(response){
+      setItems(response.data.content.length)
+      // console.log(response.data);
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+
+    api.get('/supapp/api/service-providers',{
+      headers:{
+        'accessToken': `Bearer ${localStorage.getItem('accessToken')}`,
+        'Auhorization': `Bearer ${localStorage.getItem('accessToken')}`
+      }
+    })
+    .then(function(response){
+      // console.log(response.data);
+      setClients(response.data.content.length)
+    })
+    .catch(function(error){
+      console.log(error);
+    })
+  } , [])
+
+
+
 
   return (
     <div className="overview">
@@ -84,24 +143,24 @@ const Overview = () => {
               <div className="stats  mb-20 ">
                 <GiDeliveryDrone className="iconsSide text-black mx-[auto] mt-5 mb-[-5px]" />
                 <p className="mt-8 text-xl font-normal ">Orders</p>
-                <p className="amount">67890</p>
+                <p className="amount">{orders}</p>
               </div>
               <div className="stats  mb-20">
                 <FaShoppingBag className="iconsSide text-black mx-[auto] mt-5" />
                 <p className="mt-5 text-xl font-normal">Items</p>
-                <p className="amount">67890</p>
+                <p className="amount">{items}</p>
               </div>
             </div>
             <div className="flex gap-40 ml-36">
               <div className="stats  mb-20">
                 <AiOutlineUsergroupAdd className="iconsSide text-black mx-[auto] mt-5" />
                 <p className="mt-5 text-xl font-normal">Clients</p>
-                <p className="amount">67890</p>
+                <p className="amount">{clients}</p>
               </div>
               <div className="stats  mb-20">
                 <AiOutlineFieldTime className="iconsSide text-black mx-[auto] mt-5" />
                 <p className="mt-5 text-xl font-normal">Order/Hour</p>
-                <p className="amount">67890</p>
+                <p className="amount">5</p>
               </div>
             </div>
           </div>
@@ -139,7 +198,7 @@ const Overview = () => {
           </div>
 
           <div  className="mt-10 bg-green ">
-            <Swiper
+            {/* <Swiper
              modules={[Navigation,EffectFade,Autoplay,Pagination]}
              pagination
              autoplay={{delay : 1000}}
@@ -165,7 +224,7 @@ const Overview = () => {
                <img src={slider[3].image} alt="" />
              </SwiperSlide>
 
-            </Swiper>
+            </Swiper> */}
           </div>
         </div>
         
