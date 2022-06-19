@@ -58,7 +58,7 @@ const Order = () => {
     setOrder(Data.filter((v) => v.status === "PLACED"));
     setPaced(Data.filter((v) => v.status === "PLACED").length);
   };
-
+  
   const rejectedHandler = () => {
     setOrder(Data.filter((v) => v.status === "CANCELLED"));
     setRejected(Data.filter((v) => v.status === "CANCELLED").length);

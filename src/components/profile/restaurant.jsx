@@ -7,7 +7,23 @@ import RestMenu from './ownmenu';
 
 const Profile = ()=>{
     const [step, setStep]=useState(1)
+    const [data1 , setData1] = useState()
+    const [data2 , setData2] = useState()
+     
+    const fetchit = (datas , num) =>{
+        setData1(datas)
+    //   setData([...data , datas ]);
+    //   console.log(data);
+      setStep(num) 
+    }
 
+    const fetchthem = (datas , num) =>{
+        setData2(datas)
+    //  setData([...data , datas])
+     setStep(num)
+    //  console.log(data);
+
+    }
 
     return(
         <div className='mainProfile h-[100%]'>
@@ -47,9 +63,9 @@ const Profile = ()=>{
                 </div>
                 
                <div className='filling'>
-               {step === 1 && <Info />}
-               {step === 2 && <RestType />}
-               {step === 3 && <RestMenu />}
+               {step === 1 && <Info getData={fetchit} />}
+               {step === 2 && <RestType getSecond={fetchthem} />}
+               {step === 3 && <RestMenu Data1={data1} Data2={data2} />}
                </div>
             </div>
         </div>

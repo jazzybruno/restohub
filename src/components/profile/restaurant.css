@@ -67,6 +67,7 @@ background-color: #b3c10f;
 
 #res-info-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -76,6 +77,7 @@ background-color: #b3c10f;
     width: 95%;
     height: 90%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -118,7 +120,7 @@ background-color: #b3c10f;
 .RestType{
     background-color: #fff;
     border-radius: 10px;
-    height: 72vh;
+    height: 77vh;
     width: 55vw;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -261,4 +263,28 @@ background-color: #b3c10f;
     }
     
     
+}
+
+.buttonProfile{
+    background-color: #b3c10f;  
+    height: 8%;
+    width: 12%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.buttonProfile2{
+    background-color: #b3c10f;  
+    height: 6vh;
+    width: 12%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    /* margin-left: auto; */
+}
+
+.buttonDiv{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    height: 9vh; 
 }
