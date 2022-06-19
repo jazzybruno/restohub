@@ -11,9 +11,15 @@ import Order from "./components/orders/order";
 import Profile from "./components/profile/restaurant";
 // import Footer from "./components/UI/footer";
 import "./App.css";
+import jwtDecode from "jwt-decode";
+import axios from 'axios'
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
+
+  const api = axios.create({
+    baseURL: `https://backend.supamenu.rw`
+  })
 
   const authorize=()=>{
     const token = localStorage.getItem('accessToken');
@@ -25,8 +31,43 @@ const App = () => {
 
   }
 
+  const isValid = () => {
+     const token = localStorage.getItem('accessToken');
+     const decoded = jwtDecode(token);
+     const time = decoded.exp * 1000;
+     const human = new Date(time)
+     const read = human.toUTCString()
+     const date = new Date(Date.now());
+     const now = date.toUTCString()
+
+     if(read < now){
+      const refresh = localStorage.getItem('refreshToken');
+      api.post("/supapp/api/auth/refreshToken" , {
+        "refreshToken": refresh
+      } , {
+        headers:{
+          "Content-Type": "application/json",
+          'accessToken': `Bearer ${localStorage.getItem('accessToken')}`,
+          'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        }
+      } )
+      .then(function (response) {
+        localStorage.setItem('accessToken', response.data.accessToken)
+        localStorage.setItem('refreshToken', response.data.refreshToken)
+      })
+      .catch(function (error){
+        console.log(error)
+      })
+     }else{
+      console.log("it is still valid");
+     }
+     console.log(now);
+     console.log(read);
+  }
+
   useEffect(()=>{
     authorize();
+    isValid();
   },[])
 
  
