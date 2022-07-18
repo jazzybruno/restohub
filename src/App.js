@@ -23,6 +23,11 @@ const App = () => {
   })
 
   const authorize=()=>{
+
+     if(localStorage.getItem('accessToken') == ''){
+      return;
+     }
+    
     const token = localStorage.getItem('accessToken');
     if(token){
         setIsLoggedIn(true)
@@ -74,7 +79,7 @@ const App = () => {
 
   useEffect(()=>{
     authorize();
-    isValid();
+    // isValid();
   },[])
 
  
