@@ -13,6 +13,7 @@ import Profile from "./components/profile/restaurant";
 import "./App.css";
 import jwtDecode from "jwt-decode";
 import axios from 'axios'
+import { GiExitDoor } from "react-icons/gi";
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -22,6 +23,11 @@ const App = () => {
   })
 
   const authorize=()=>{
+
+     if(localStorage.getItem('accessToken') == ''){
+      return;
+     }
+    
     const token = localStorage.getItem('accessToken');
     if(token){
         setIsLoggedIn(true)
@@ -33,6 +39,12 @@ const App = () => {
 
   const isValid = () => {
      const token = localStorage.getItem('accessToken');
+     if(token){
+      setIsLoggedIn(true)
+  }else{
+    setIsLoggedIn(false)
+    
+  }
      const decoded = jwtDecode(token);
      const time = decoded.exp * 1000;
      const human = new Date(time)
@@ -67,7 +79,7 @@ const App = () => {
 
   useEffect(()=>{
     authorize();
-    isValid();
+    // isValid();
   },[])
 
  
